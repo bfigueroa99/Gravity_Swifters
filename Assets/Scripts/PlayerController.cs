@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed= 2f; 
     public float jumpForce= 10f;
     private bool isGrounded= false;
+    private bool isTopGrounded= false;
     
     void Start()
     {
@@ -30,6 +31,35 @@ public class PlayerController : MonoBehaviour
             isGrounded= false;
 
         }
+
+        if (Input.GetButtonDown("Jump") && isTopGrounded)
+        {
+            Debug.Log("Salto activado");
+            rb.velocity= new Vector2(rb.velocity.x, -jumpForce);
+            isTopGrounded= false;
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("Cambio de gravedad");
+            rb.gravityScale *= -1;
+            CharacterRotation();
+        }
+    }
+
+    void CharacterRotation(){
+        if (isTopGrounded == false)
+        {
+            transform.eulerAngles= new Vector3(0, 0, 180);
+        }
+        else 
+        {
+            transform.eulerAngles= new Vector3(0, 0, 0);
+        }
+
+        isTopGrounded= !isTopGrounded;
+    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +68,11 @@ public class PlayerController : MonoBehaviour
         {   
             Debug.Log("Tocando suelo");
             isGrounded= true;
+        }
+        if (collision.gameObject.tag == "TopGround")
+        {
+            Debug.Log("Tocando techo");
+            isTopGrounded= true;
         }
     }
 }
