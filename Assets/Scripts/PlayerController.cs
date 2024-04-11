@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded= false;
     private bool isTopGrounded= false;
     
+    private bool isInverted= false;
+    private float jumpTimeTracker;
+    public float jumpTime;
+     private bool isJumping;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,7 +33,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Salto activado");
             rb.velocity= new Vector2(rb.velocity.x, jumpForce);
             isGrounded= false;
-
+            isJumping= true;
+            jumpTimeTracker= jumpTime;
         }
 
         if (Input.GetButtonDown("Jump") && isTopGrounded)
@@ -37,12 +42,31 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Salto activado");
             rb.velocity= new Vector2(rb.velocity.x, -jumpForce);
             isTopGrounded= false;
+            isJumping= true;
+            jumpTimeTracker= jumpTime;
+        }
 
+        if (Input.GetKey(KeyCode.Space) && isJumping){
+            if (jumpTimeTracker > 0){
+                if (isInverted)
+                {
+                    rb.velocity= new Vector2(rb.velocity.x, -jumpForce);
+                    
+                }
+                else {
+                    rb.velocity= new Vector2(rb.velocity.x, jumpForce);
+                }
+                jumpTimeTracker -= Time.deltaTime;
+            } else {
+                isJumping= false;
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Debug.Log("Cambio de gravedad");
+            isInverted= !isInverted;
             rb.gravityScale *= -1;
             CharacterRotation();
         }
