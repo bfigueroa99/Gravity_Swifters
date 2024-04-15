@@ -50,40 +50,6 @@ public class PlayerController : MonoBehaviour
                 releasedJump = true;
             }
         }
-        //     if (Input.GetButtonDown("Jump") && isGrounded)
-        //     {
-        //         Debug.Log("Salto activado");
-        //         rb.velocity= new Vector2(rb.velocity.x, jumpForce);
-        //         isGrounded= false;
-        //         isJumping= true;
-        //         jumpTimeTracker= jumpTime;
-        //     }
-
-        //     if (Input.GetButtonDown("Jump") && isTopGrounded)
-        //     {
-        //         Debug.Log("Salto activado");
-        //         rb.velocity= new Vector2(rb.velocity.x, -jumpForce);
-        //         isTopGrounded= false;
-        //         isJumping= true;
-        //         jumpTimeTracker= jumpTime;
-        //     }
-        
-        // if (Input.GetKey(KeyCode.Space) && isJumping){
-        //     if (jumpTimeTracker > 0){
-        //         if (isInverted)
-        //         {
-        //             rb.velocity= new Vector2(rb.velocity.x, -jumpForce);
-                    
-        //         }
-        //         else {
-        //             rb.velocity= new Vector2(rb.velocity.x, jumpForce);
-        //         }
-        //         jumpTimeTracker -= Time.deltaTime;
-        //     } else {
-        //         isJumping= false;
-        //     }
-            
-        // }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && (isGrounded || isTopGrounded))
         {
@@ -135,14 +101,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {   
             isGrounded= true;
-        } else {
-            isGrounded= false;
         }
         if (collision.gameObject.tag == "TopGround")
         {
             isTopGrounded= true;
-        }else {
-            isTopGrounded= false;
         }
     }
 }
