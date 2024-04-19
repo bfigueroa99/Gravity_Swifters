@@ -17,10 +17,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Player
+  - Scenario
+  - Objects
   - 
   - 
   - 
@@ -43,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3327610249
+    locked: 0
+  - name: Player
+    uniqueID: 129150681
+    locked: 0
+  - name: Sceario
+    uniqueID: 3158470879
+    locked: 0
+  - name: Objects
+    uniqueID: 2661006705
     locked: 0
