@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,7 +22,16 @@ public class PlayerController : MonoBehaviour
     private bool isInverted= false;
     private float jumpTimeTracker;
     public float jumpTime;
-     private bool isJumping;
+    private bool isJumping;
+    bool isDoubleTap = false;
+    private float lastTapTime = 0f;
+    public float doubleTapTimeThreshold = 0.5f;
+    // POWER UPS
+    private bool hasSuperSpeed = false;
+    private bool isSpeedBoosted = false;
+    private float speedBoostDuration = 3f;
+    private float speedBoostEndTime = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,8 +71,21 @@ public class PlayerController : MonoBehaviour
             isTopGrounded = false;
             CharacterRotation();
         }
+        if (Input.GetButtonDown("Horizontal"))
+        {
+            if ((Time.time - lastTapTime) < doubleTapTimeThreshold && !isDoubleTap)
+            {
+                isDoubleTap = true;
+            }
+            lastTapTime = Time.time;
+        }
+        if (isSpeedBoosted && Time.time >= speedBoostEndTime)
+        {
+            isSpeedBoosted = false;
+            movementSpeed -= 8;
+        }
     }
-        private void FixedUpdate() {
+    private void FixedUpdate() {
         if (pressedJump) {
             StartJump();
         }
@@ -70,8 +93,17 @@ public class PlayerController : MonoBehaviour
         if (releasedJump) {
             StopJump();
         }
+
+        if (isDoubleTap && hasSuperSpeed && !isSpeedBoosted)
+        {
+            movementSpeed += 8;
+            isDoubleTap = false;
+            isSpeedBoosted = true;
+            speedBoostEndTime = Time.time + speedBoostDuration;
+            Debug.Log("Double tap");
+        }
     }
-        private void StartJump() {
+    private void StartJump() {
         rb.gravityScale = 0;
         rb.AddForce(new Vector2(0, gravitySense * jumpForce), ForceMode2D.Impulse);
         pressedJump = false;
@@ -106,5 +138,11 @@ public class PlayerController : MonoBehaviour
         {
             isTopGrounded= true;
         }
+    }
+
+    // POWER UP OBTAIN FUNCTIONS
+    public void ObtainSuperSpeed()
+    {
+        hasSuperSpeed = true;
     }
 }
