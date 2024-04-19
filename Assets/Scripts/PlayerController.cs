@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private bool releasedJump = false;
     private bool startTimer = false;
     private float timer;
-    public bool isGrounded = false;
+    public bool isGrounded = false; 
     public bool isTopGrounded = false;
     private bool isInverted= false;
     private float jumpTimeTracker;
