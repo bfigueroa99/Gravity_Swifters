@@ -30,9 +30,13 @@ public class PlayerController : MonoBehaviour
     private bool isSpeedBoosted = false;
     private float speedBoostDuration = 3f;
     private float speedBoostEndTime = 0f;
+
+    [Header("Animation")]
+    private Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         timer = jumpTimer;
     }
 
@@ -41,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     {   // Movimiento en eje X y salto
         float horizontalMovement= Input.GetAxis("Horizontal");
+        animator.SetFloat("Horizontal",Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
         if (Input.GetButtonDown("Jump") && (isGrounded || isTopGrounded)) {
                     pressedJump = true;
