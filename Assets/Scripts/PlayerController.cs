@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
     private bool isSpeedBoosted = false;
     private float speedBoostDuration = 3f;
     private float speedBoostEndTime = 0f;
+    public bool hasSuperAttraction = false;
+    private bool isSuperAttractionActive = false;
+    private bool hasDoubleJump = false;
+    private bool hasDoubleJumped = false;
 
     [Header("Animation")]
     private Animator animator;
@@ -48,9 +52,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal",Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
         if (Input.GetButtonDown("Jump") && (isGrounded || isTopGrounded)) {
-                    pressedJump = true;
-                    isGrounded = false;
-                    isTopGrounded = false;
+            pressedJump = true;
+            isGrounded = false;
+            isTopGrounded = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && hasDoubleJump && !hasDoubleJumped && !isGrounded && !isTopGrounded) {
+            StartDoubleJump();
         }
 
         if (Input.GetButtonUp("Jump")) {
@@ -88,8 +95,13 @@ public class PlayerController : MonoBehaviour
             isSpeedBoosted = false;
             movementSpeed -= 8;
         }
+        if (hasSuperAttraction && Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            isSuperAttractionActive = !isSuperAttractionActive;
+            ApplySuperAttraction();
+        }
     }
-        private void FixedUpdate() {
+    private void FixedUpdate() {
         if (pressedJump) {
             StartJump();
         }
@@ -107,7 +119,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Double tap");
         }
     }
-        private void StartJump() {
+    private void StartJump() {
         rb.gravityScale = 0;
         rb.AddForce(new Vector2(0, gravitySense * jumpForce), ForceMode2D.Impulse);
         pressedJump = false;
@@ -119,6 +131,12 @@ public class PlayerController : MonoBehaviour
         releasedJump = false;
         timer = jumpTimer;
         startTimer = false;
+    }
+    private void StartDoubleJump() {
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        rb.AddForce(new Vector2(0, gravitySense * jumpForce), ForceMode2D.Impulse);
+        hasDoubleJumped = true;
     }
 
     void CharacterRotation(){
@@ -137,16 +155,37 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {   
             isGrounded= true;
+            hasDoubleJumped = false;
         }
         if (collision.gameObject.tag == "TopGround")
         {
             isTopGrounded= true;
+            hasDoubleJumped = false;
         }
     }
 
-    // POWER UP OBTAIN FUNCTIONS
+    // POWER UPS
     public void ObtainSuperSpeed()
     {
         hasSuperSpeed = true;
+        Debug.Log("Super speed obtained");
+    }
+    public void ObtainSuperAttraction()
+    {
+        hasSuperAttraction = true;
+        Debug.Log("Super attraction obtained");
+    }
+    public void ObtainDoubleJump()
+    {
+        hasDoubleJump = true;
+        Debug.Log("Double jump obtained");
+    }
+    public void ApplySuperAttraction()
+    {
+        GravitySwitch[] gravitySwitches = FindObjectsOfType<GravitySwitch>();
+        foreach (GravitySwitch gravitySwitch in gravitySwitches)
+        {
+            gravitySwitch.ModifyForceDirection(isSuperAttractionActive);
+        }
     }
 }

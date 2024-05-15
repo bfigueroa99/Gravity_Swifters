@@ -24,4 +24,18 @@ public class GravitySwitch : MonoBehaviour
             cForce.force = forceDirection;
         }
     }
+
+    public void ModifyForceDirection(bool enableSuperAttraction)
+    {
+        if (enableSuperAttraction)
+        {
+            forceDirection *= 2;
+        }
+        else
+        {
+            forceDirection /= 2;
+        }
+
+        cForce.force = forceDirection;
+    }
 }

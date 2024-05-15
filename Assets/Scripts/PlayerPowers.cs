@@ -15,6 +15,14 @@ public class PlayerPowers : MonoBehaviour
         {
             player.GetComponent<PlayerController>().ObtainSuperSpeed();
         }
+        if (item.name == "SuperAttraction")
+        {
+            player.GetComponent<PlayerController>().ObtainSuperAttraction();
+        }
+        if (item.name == "DoubleJump")
+        {
+            player.GetComponent<PlayerController>().ObtainDoubleJump();
+        }
     }
 
 }
