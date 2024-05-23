@@ -35,7 +35,13 @@ public class ItemPickup : MonoBehaviour
 
     private void PickUp()
     {
-        player.GetComponent<PlayerPowers>().AddItem(gameObject);
-        Destroy(gameObject);
+        if(gameObject.tag.Equals("Power")){
+            player.GetComponent<PlayerPowers>().AddItem(gameObject);
+            Destroy(gameObject);
+        }
+        else if(gameObject.tag.Equals("Relic")){
+            Destroy(gameObject);
+            Debug.Log("Relic picked up");
+        }
     }
 }
