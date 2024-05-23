@@ -7,6 +7,11 @@ TagManager:
   - Ground
   - TopGround
   - Platform
+  - Tree
+  - Power
+  - Relic
+  - Enemy
+  - Health
   layers:
   - Default
   - TransparentFX
