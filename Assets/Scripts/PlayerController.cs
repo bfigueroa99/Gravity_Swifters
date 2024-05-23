@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float horizontalMovement;
+    private int maxHealth = 5;
+    private int currentHealth;
+    public float invulnerabilityDuration = 1f;
+    private bool isInvulnerable = false;
+    private float invulnerabilityTimer; 
     public float movementSpeed = 2f; 
     public float jumpForce = 50f;
     public float gravityScale = 2f;
@@ -42,6 +48,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         timer = jumpTimer;
+        currentHealth = maxHealth;
     }
 
     
@@ -99,6 +106,16 @@ public class PlayerController : MonoBehaviour
         {
             isSuperAttractionActive = !isSuperAttractionActive;
             ApplySuperAttraction();
+        }
+
+        // Invulnerability timer after taking damage
+        if (isInvulnerable)
+        {
+            invulnerabilityTimer -= Time.deltaTime;
+            if (invulnerabilityTimer <= 0)
+            {
+                isInvulnerable = false;
+            }
         }
     }
     private void FixedUpdate() {
@@ -187,5 +204,36 @@ public class PlayerController : MonoBehaviour
         {
             gravitySwitch.ModifyForceDirection(isSuperAttractionActive);
         }
+    }
+
+    //Health
+    public void Heal(int heal)
+    {
+        currentHealth += heal;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        Debug.Log("Player healed. Current health: " + currentHealth);
+    }
+    public void TakeDamage(int damage)
+    {
+        if (!isInvulnerable)
+        {
+            currentHealth -= damage;
+            isInvulnerable = true;
+            invulnerabilityTimer = invulnerabilityDuration;
+            Debug.Log("Player took damage. Current health: " + currentHealth);
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }     
+        }
+    }
+    public void Die()
+    {
+        Debug.Log("Player died");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
