@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
     bool isDoubleTap = false;
     private float lastTapTime = 0f;
     public float doubleTapTimeThreshold = 0.5f;
+    public AudioSource gravitySwiftSound;
+    public AudioSource walkingSound;
+    bool stoppedWalkingSound;
+
     // POWER UPS
     private bool hasSuperSpeed = false;
     private bool isSpeedBoosted = false;
@@ -56,13 +60,33 @@ public class PlayerController : MonoBehaviour
 
     {   // Movimiento en eje X y salto
         float horizontalMovement= Input.GetAxis("Horizontal");
-        animator.SetFloat("Horizontal",Mathf.Abs(horizontalMovement));
+        animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
+
+        if (rb.velocity.magnitude == 0)
+        {   
+            walkingSound.Play();
+            stoppedWalkingSound = false;
+        }
+
+        if ((isGrounded || isTopGrounded) && stoppedWalkingSound)
+        {
+            walkingSound.Play();
+            stoppedWalkingSound = false;
+        }
+
+        if ((isGrounded || isTopGrounded) == false)
+        {
+            walkingSound.Stop();
+            stoppedWalkingSound = true;
+        }
+
         if (Input.GetButtonDown("Jump") && (isGrounded || isTopGrounded)) {
             pressedJump = true;
             isGrounded = false;
             isTopGrounded = false;
         }
+
         else if (Input.GetKeyDown(KeyCode.Space) && hasDoubleJump && !hasDoubleJumped && !isGrounded && !isTopGrounded) {
             StartDoubleJump();
         }
@@ -84,6 +108,7 @@ public class PlayerController : MonoBehaviour
             isInverted= !isInverted;
             gravitySense *= -1;
             rb.gravityScale *= -1;
+            gravitySwiftSound.Play();
             isGrounded = false;
             isTopGrounded = false;
             CharacterRotation();
@@ -97,11 +122,13 @@ public class PlayerController : MonoBehaviour
             }
             lastTapTime = Time.time;
         }
+
         if (isSpeedBoosted && Time.time >= speedBoostEndTime)
         {
             isSpeedBoosted = false;
             movementSpeed -= 8;
         }
+
         if (hasSuperAttraction && Input.GetKeyDown(KeyCode.Alpha1))
         {
             isSuperAttractionActive = !isSuperAttractionActive;
