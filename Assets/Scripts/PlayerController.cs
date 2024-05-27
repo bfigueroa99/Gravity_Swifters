@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource gravitySwiftSound;
     public AudioSource walkingSound;
     bool stoppedWalkingSound;
+    public AudioSource ouchSound;
 
     // POWER UPS
     private bool hasSuperSpeed = false;
@@ -243,6 +244,8 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log("Player healed. Current health: " + currentHealth);
     }
+
+
     public void TakeDamage(int damage)
     {
         if (!isInvulnerable)
@@ -250,7 +253,8 @@ public class PlayerController : MonoBehaviour
             currentHealth -= damage;
             isInvulnerable = true;
             invulnerabilityTimer = invulnerabilityDuration;
-            Debug.Log("Player took damage. Current health: " + currentHealth);
+            //Debug.Log("Player took damage. Current health: " + currentHealth);
+            ouchSound.Play();
 
             if (currentHealth <= 0)
             {
