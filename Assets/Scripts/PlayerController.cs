@@ -158,6 +158,9 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void FixedUpdate() {
+        
+        animator.SetBool("onFloor",isGrounded);
+
         if (pressedJump) {
             StartJump();
         }

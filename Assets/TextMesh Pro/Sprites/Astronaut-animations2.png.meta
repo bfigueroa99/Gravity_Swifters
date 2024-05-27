@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: aa67f6df71673034fbe895aea9df0972
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -988925514283999557
+    second: Astronaut-animations2_0
+  - first:
+      213: -4473801249361320196
+    second: Astronaut-animations2_1
+  - first:
+      213: 9154550175002099012
+    second: Astronaut-animations2_2
+  - first:
+      213: 552448144422042389
+    second: Astronaut-animations2_3
+  - first:
+      213: 8476389666384558844
+    second: Astronaut-animations2_4
+  - first:
+      213: 5263971444931757633
+    second: Astronaut-animations2_5
+  - first:
+      213: -5721708500203746548
+    second: Astronaut-animations2_6
+  - first:
+      213: -3309329043826176081
+    second: Astronaut-animations2_7
+  - first:
+      213: -2418841399744975317
+    second: Astronaut-animations2_8
+  - first:
+      213: -5575068182925769070
+    second: Astronaut-animations2_9
+  - first:
+      213: -5503506293445434328
+    second: Astronaut-animations2_10
+  - first:
+      213: -3208729130367910874
+    second: Astronaut-animations2_11
+  - first:
+      213: 8934848999100977094
+    second: Astronaut-animations2_12
+  - first:
+      213: 2329776816428148648
+    second: Astronaut-animations2_13
+  - first:
+      213: -6158782930786829484
+    second: Astronaut-animations2_14
+  - first:
+      213: -8028271478741190531
+    second: Astronaut-animations2_15
+  - first:
+      213: 1069623264847781934
+    second: Astronaut-animations2_16
+  - first:
+      213: 5491914562894303114
+    second: Astronaut-animations2_17
+  - first:
+      213: 329892025399255139
+    second: Astronaut-animations2_18
+  - first:
+      213: 6676229489400184867
+    second: Astronaut-animations2_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Astronaut-animations2_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 667
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe18cbfb71a642f0800000000000000
+      internalID: -988925514283999557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 282
+        width: 79
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6ae18877dd9e1c0800000000000000
+      internalID: -4473801249361320196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_2
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 411
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d7d7b91ee7b0f70800000000000000
+      internalID: 9154550175002099012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 283
+        width: 72
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b791d09a0baa700800000000000000
+      internalID: 552448144422042389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 282
+        width: 74
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfab4a2ed7f22a570800000000000000
+      internalID: 8476389666384558844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 282
+        width: 72
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14605f2b3226d0940800000000000000
+      internalID: 5263971444931757633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 282
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bc5091f686890b0800000000000000
+      internalID: -5721708500203746548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_7
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 283
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf8bd9a4c6e212d0800000000000000
+      internalID: -3309329043826176081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 155
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e2130009c8e6ed0800000000000000
+      internalID: -2418841399744975317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 155
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296802e860161a2b0800000000000000
+      internalID: -5575068182925769070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 155
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824ee085f2e9f93b0800000000000000
+      internalID: -5503506293445434328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_11
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 155
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62cf8f34bdd4873d0800000000000000
+      internalID: -3208729130367910874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_12
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 155
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf0b2963d5fefb70800000000000000
+      internalID: 8934848999100977094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_13
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 155
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7e32dbba7055020800000000000000
+      internalID: 2329776816428148648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_14
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 27
+        width: 45
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b36b91e8b978aa0800000000000000
+      internalID: -6158782930786829484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_15
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 27
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d783b3d20a9d59090800000000000000
+      internalID: -8028271478741190531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_16
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 27
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20eeb831b018de00800000000000000
+      internalID: 1069623264847781934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_17
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 27
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f0c129233373c40800000000000000
+      internalID: 5491914562894303114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_18
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 27
+        width: 30
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360282c9c03049400800000000000000
+      internalID: 329892025399255139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-animations2_19
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 27
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3208fa2395bb6ac50800000000000000
+      internalID: 6676229489400184867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1bf77e26af1a2de46bc3cf9a231e841a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Astronaut-animations2_0: -988925514283999557
+      Astronaut-animations2_1: -4473801249361320196
+      Astronaut-animations2_10: -5503506293445434328
+      Astronaut-animations2_11: -3208729130367910874
+      Astronaut-animations2_12: 8934848999100977094
+      Astronaut-animations2_13: 2329776816428148648
+      Astronaut-animations2_14: -6158782930786829484
+      Astronaut-animations2_15: -8028271478741190531
+      Astronaut-animations2_16: 1069623264847781934
+      Astronaut-animations2_17: 5491914562894303114
+      Astronaut-animations2_18: 329892025399255139
+      Astronaut-animations2_19: 6676229489400184867
+      Astronaut-animations2_2: 9154550175002099012
+      Astronaut-animations2_3: 552448144422042389
+      Astronaut-animations2_4: 8476389666384558844
+      Astronaut-animations2_5: 5263971444931757633
+      Astronaut-animations2_6: -5721708500203746548
+      Astronaut-animations2_7: -3309329043826176081
+      Astronaut-animations2_8: -2418841399744975317
+      Astronaut-animations2_9: -5575068182925769070
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
