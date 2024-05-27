@@ -12,6 +12,7 @@ TagManager:
   - Relic
   - Enemy
   - Health
+  - Hazards
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Player
   - Scenario
   - Objects
-  - 
+  - Hazards
   - 
   - 
   - 
@@ -60,4 +61,7 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 2661006705
+    locked: 0
+  - name: Hazards
+    uniqueID: 171667565
     locked: 0
