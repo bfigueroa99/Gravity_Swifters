@@ -48,12 +48,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")]
     private Animator animator;
+    private Vector3 originalScale;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         timer = jumpTimer;
         currentHealth = maxHealth;
+        originalScale = transform.localScale;
     }
 
     
@@ -63,6 +65,15 @@ public class PlayerController : MonoBehaviour
         float horizontalMovement= Input.GetAxis("Horizontal");
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
+
+        if (horizontalMovement < 0)
+        {
+            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z); // Hacia la izquierda
+        }
+        else if (horizontalMovement > 0)
+        {
+            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z); // Hacia la derecha
+        }
 
         if (rb.velocity.magnitude == 0)
         {   
@@ -187,7 +198,7 @@ public class PlayerController : MonoBehaviour
     void CharacterRotation(){
         if (gravitySense == -1)
         {
-            transform.eulerAngles= new Vector3(0, 0, 180);
+            transform.eulerAngles = new Vector3(0, 180, 180);
         }
         if (gravitySense == 1)
         {
