@@ -264,7 +264,6 @@ public class PlayerController : MonoBehaviour
             currentHealth -= damage;
             isInvulnerable = true;
             invulnerabilityTimer = invulnerabilityDuration;
-            //Debug.Log("Player took damage. Current health: " + currentHealth);
             ouchSound.Play();
 
             if (currentHealth <= 0)

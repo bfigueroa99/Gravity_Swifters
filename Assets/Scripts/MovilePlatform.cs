@@ -4,59 +4,70 @@ using UnityEngine;
 
 public class MovilePlatform : MonoBehaviour
 {
-    [SerializeField] private Transform[] puntosMovimientos;
-    [SerializeField] private float velocidadMovimiento;
-    private int siguientePlataforma = 1;
-    private bool orderPlataformas = true;
+    [SerializeField] private Transform[] movementPoints;
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float delayAtPoint = 0f; 
 
-    private List<Rigidbody2D> jugadoresEnContacto = new List<Rigidbody2D>();
+    private int nextPlatformIndex = 1;
+    private bool isMovingForward = true;
+
+    private List<Rigidbody2D> playerContacts = new List<Rigidbody2D>();
     private Vector2 lastPlatformPosition;
+    private bool isWaiting = false;
 
     private void Start()
     {
         lastPlatformPosition = transform.position;
+        StartCoroutine(MovePlatform());
     }
 
-    private void Update()
+    private IEnumerator MovePlatform()
     {
-        if (orderPlataformas && siguientePlataforma + 1 >= puntosMovimientos.Length)
+        while (true)
         {
-            orderPlataformas = false;
+            if (!isWaiting)
+            {
+                if (isMovingForward && nextPlatformIndex + 1 >= movementPoints.Length)
+                {
+                    isMovingForward = false;
+                }
+                else if (!isMovingForward && nextPlatformIndex <= 0)
+                {
+                    isMovingForward = true;
+                }
+
+                if (Vector2.Distance(transform.position, movementPoints[nextPlatformIndex].position) < 0.1f)
+                {
+                    nextPlatformIndex = isMovingForward ? nextPlatformIndex + 1 : nextPlatformIndex - 1;
+                    isWaiting = true;
+                    yield return new WaitForSeconds(delayAtPoint);
+                    isWaiting = false;
+                }
+
+                transform.position = Vector2.MoveTowards(transform.position, movementPoints[nextPlatformIndex].position, movementSpeed * Time.deltaTime);
+
+                Vector2 platformMovement = (Vector2)transform.position - lastPlatformPosition;
+
+                foreach (var player in playerContacts)
+                {
+                    player.position += platformMovement;
+                }
+
+                lastPlatformPosition = transform.position;
+            }
+
+            yield return null;
         }
-
-        if (!orderPlataformas && siguientePlataforma <= 0)
-        {
-            orderPlataformas = true;
-        }
-
-        if (Vector2.Distance(transform.position, puntosMovimientos[siguientePlataforma].position) < 0.1f)
-        {
-            siguientePlataforma = orderPlataformas ? siguientePlataforma + 1 : siguientePlataforma - 1;
-        }
-
-        // Calcular la diferencia entre la posición actual y la posición anterior de la plataforma
-        Vector2 platformMovement = (Vector2)transform.position - lastPlatformPosition;
-
-        // Actualizar la posición de todos los jugadores en contacto con la plataforma
-        foreach (var jugador in jugadoresEnContacto)
-        {
-            jugador.position += platformMovement;
-        }
-
-        // Guardar la posición actual de la plataforma para el siguiente cuadro
-        lastPlatformPosition = transform.position;
-
-        transform.position = Vector2.MoveTowards(transform.position, puntosMovimientos[siguientePlataforma].position, velocidadMovimiento * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Rigidbody2D jugadorRB = collision.gameObject.GetComponent<Rigidbody2D>();
-            if (jugadorRB != null && !jugadoresEnContacto.Contains(jugadorRB))
+            Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (playerRB != null && !playerContacts.Contains(playerRB))
             {
-                jugadoresEnContacto.Add(jugadorRB);
+                playerContacts.Add(playerRB);
             }
         }
     }
@@ -65,10 +76,10 @@ public class MovilePlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Rigidbody2D jugadorRB = collision.gameObject.GetComponent<Rigidbody2D>();
-            if (jugadorRB != null && jugadoresEnContacto.Contains(jugadorRB))
+            Rigidbody2D playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (playerRB != null && playerContacts.Contains(playerRB))
             {
-                jugadoresEnContacto.Remove(jugadorRB);
+                playerContacts.Remove(playerRB);
             }
         }
     }
