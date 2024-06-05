@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Cambio de gravedad");
             isInverted= !isInverted;
             gravitySense *= -1;
+            rb.gravityScale *= -1;
             gravitySwiftSound.Play();
             isGrounded = false;
             isTopGrounded = false;
