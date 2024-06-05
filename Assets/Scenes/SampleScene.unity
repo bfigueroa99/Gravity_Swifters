@@ -59804,8 +59804,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1eac427b0348b4a3698df6c9626f4ca2, type: 3}
-  m_Resource: {fileID: 8300000, guid: 1eac427b0348b4a3698df6c9626f4ca2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a17f676bb17c7214c88423d86e68eb82, type: 3}
+  m_Resource: {fileID: 8300000, guid: a17f676bb17c7214c88423d86e68eb82, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -60523,14 +60523,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerabilityDuration: 1
-  movementSpeed: 5
-  jumpForce: 30
-  gravityScale: 2
+  movementSpeed: 8
+  jumpForce: 16
+  doubleJumpForce: 12
   gravitySense: 1
-  jumpTimer: 1
   isGrounded: 0
   isTopGrounded: 0
-  jumpTime: 0.3
   doubleTapTimeThreshold: 0.5
   gravitySwiftSound: {fileID: 1953523672}
   walkingSound: {fileID: 828976189}
@@ -60812,7 +60810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490033178167583264, guid: 97011264521954b4394c9b40f50941b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.62
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 7490033178167583264, guid: 97011264521954b4394c9b40f50941b1, type: 3}
       propertyPath: m_LocalPosition.z

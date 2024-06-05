@@ -13,21 +13,13 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 1f;
     private bool isInvulnerable = false;
     private float invulnerabilityTimer; 
-    public float movementSpeed = 2f; 
-    public float jumpForce = 50f;
-    public float gravityScale = 2f;
+    public float movementSpeed = 8f; 
+    public float jumpForce = 16f;
+    public float doubleJumpForce = 12f;
     public float gravitySense = 1f;
-    public float jumpTimer = 1f;
-    private bool pressedJump = false;
-    private bool releasedJump = false;
-    private bool startTimer = false;
-    private float timer;
     public bool isGrounded = false; 
     public bool isTopGrounded = false;
     private bool isInverted= false;
-    private float jumpTimeTracker;
-    public float jumpTime;
-    private bool isJumping;
     bool isDoubleTap = false;
     private float lastTapTime = 0f;
     public float doubleTapTimeThreshold = 0.5f;
@@ -44,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public bool hasSuperAttraction = false;
     private bool isSuperAttractionActive = false;
     private bool hasDoubleJump = false;
-    private bool hasDoubleJumped = false;
+    private bool doubleJumpWindow = false;
 
     [Header("Animation")]
     private Animator animator;
@@ -53,7 +45,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        timer = jumpTimer;
         currentHealth = maxHealth;
         originalScale = transform.localScale;
     }
@@ -61,7 +52,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
 
-    {   // Movimiento en eje X y salto
+    {   // Movimiento en eje X
         float horizontalMovement= Input.GetAxis("Horizontal");
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
@@ -75,6 +66,8 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z); // Hacia la derecha
         }
 
+
+        // Sonido de caminar
         if (rb.velocity.magnitude == 0)
         {   
             walkingSound.Play();
@@ -93,33 +86,40 @@ public class PlayerController : MonoBehaviour
             stoppedWalkingSound = true;
         }
 
-        if (Input.GetButtonDown("Jump") && (isGrounded || isTopGrounded)) {
-            pressedJump = true;
-            isGrounded = false;
-            isTopGrounded = false;
+        // Salto
+        if ((isGrounded || isTopGrounded) && !Input.GetButton("Jump"))
+        {
+            doubleJumpWindow = false;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && hasDoubleJump && !hasDoubleJumped && !isGrounded && !isTopGrounded) {
-            StartDoubleJump();
-        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGrounded || isTopGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                doubleJumpWindow = !doubleJumpWindow;
+                isGrounded = false;
+                isTopGrounded = false;
+            }
 
-        if (Input.GetButtonUp("Jump")) {
-            releasedJump = true;
-        }
+            else if ((!isGrounded || !isTopGrounded) && doubleJumpWindow && hasDoubleJump){
+                rb.velocity = new Vector2(rb.velocity.x, doubleJumpForce);
 
-        if (startTimer) {
-            timer -= Time.deltaTime;
-            if (timer <= 0) {
-                releasedJump = true;
+                doubleJumpWindow = !doubleJumpWindow;
             }
         }
 
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        // Cambio de gravedad
         if (Input.GetKeyDown(KeyCode.LeftShift) && (isGrounded || isTopGrounded))
         {
             Debug.Log("Cambio de gravedad");
             isInverted= !isInverted;
             gravitySense *= -1;
-            rb.gravityScale *= -1;
             gravitySwiftSound.Play();
             isGrounded = false;
             isTopGrounded = false;
@@ -161,13 +161,6 @@ public class PlayerController : MonoBehaviour
         
         animator.SetBool("onFloor",isGrounded);
 
-        if (pressedJump) {
-            StartJump();
-        }
-
-        if (releasedJump) {
-            StopJump();
-        }
 
         if (isDoubleTap && hasSuperSpeed && !isSpeedBoosted)
         {
@@ -177,25 +170,6 @@ public class PlayerController : MonoBehaviour
             speedBoostEndTime = Time.time + speedBoostDuration;
             Debug.Log("Double tap");
         }
-    }
-    private void StartJump() {
-        rb.gravityScale = 0;
-        rb.AddForce(new Vector2(0, gravitySense * jumpForce), ForceMode2D.Impulse);
-        pressedJump = false;
-        startTimer = true;
-    }
-
-    private void StopJump() {
-        rb.gravityScale = gravityScale * gravitySense;
-        releasedJump = false;
-        timer = jumpTimer;
-        startTimer = false;
-    }
-    private void StartDoubleJump() {
-        rb.gravityScale = 0;
-        rb.velocity = new Vector2(rb.velocity.x, 0f);
-        rb.AddForce(new Vector2(0, gravitySense * jumpForce), ForceMode2D.Impulse);
-        hasDoubleJumped = true;
     }
 
     void CharacterRotation(){
@@ -214,12 +188,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {   
             isGrounded= true;
-            hasDoubleJumped = false;
         }
         if (collision.gameObject.tag == "TopGround")
         {
             isTopGrounded= true;
-            hasDoubleJumped = false;
         }
     }
 

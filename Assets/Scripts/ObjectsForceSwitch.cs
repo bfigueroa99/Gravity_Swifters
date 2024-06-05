@@ -29,11 +29,11 @@ public class GravitySwitch : MonoBehaviour
     {
         if (enableSuperAttraction)
         {
-            forceDirection *= 2;
+            forceDirection *= 3;
         }
         else
         {
-            forceDirection /= 2;
+            forceDirection /= 3;
         }
 
         cForce.force = forceDirection;
