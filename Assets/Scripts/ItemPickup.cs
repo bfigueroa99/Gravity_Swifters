@@ -1,25 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
     public GameObject player;
     private bool pickupAllowed;
+    private UIController uiController;
 
-    // Update is called once per frame
+    void Start()
+    {
+        uiController = FindObjectOfType<UIController>();
+        if (uiController == null)
+        {
+            Debug.LogError("UIController not found in the scene!");
+        }
+    }
+
     void Update()
     {
         if (pickupAllowed && Input.GetKeyDown(KeyCode.E))
         {
             PickUp();
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             pickupAllowed = true;
         }
@@ -27,7 +33,7 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             pickupAllowed = false;
         }
@@ -35,13 +41,20 @@ public class ItemPickup : MonoBehaviour
 
     private void PickUp()
     {
-        if(gameObject.tag.Equals("Power")){
+        if (gameObject.CompareTag("Power"))
+        {
             player.GetComponent<PlayerPowers>().AddItem(gameObject);
             Destroy(gameObject);
+            Debug.Log("Power picked up and destroyed.");
         }
-        else if(gameObject.tag.Equals("Relic")){
-            Destroy(gameObject);
+        else if (gameObject.CompareTag("Relic"))
+        {
             Debug.Log("Relic picked up");
+            if (uiController != null)
+            {
+                uiController.ShowImage();
+            }
+            Destroy(gameObject);
         }
     }
 }

@@ -1,0 +1,87 @@
+using System.Collections;
+using UnityEngine;
+using TMPro;
+
+public class dialogue : MonoBehaviour
+{
+    private bool isPlayerInRange;
+    private bool didDialogueStart;
+    private int lineIndex;
+
+    [SerializeField, TextArea(4,6)] private string[] dialogueLines;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+
+    void Update()
+    {
+        if(isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            if (!didDialogueStart){
+
+                StartDialogue();           
+            }
+            else if(dialogueText.text == dialogueLines[lineIndex])
+            {
+                NextDialogueLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                dialogueText.text = dialogueLines[lineIndex];
+            }
+        }
+    }
+
+    private void StartDialogue()
+    {
+        didDialogueStart = true;
+        dialoguePanel.SetActive(true);
+        lineIndex = 0;
+        Time.timeScale = 0f;
+        StartCoroutine(ShowDialogue());
+    }
+
+    private void NextDialogueLine()
+    {
+        lineIndex++;
+        if (lineIndex < dialogueLines.Length)
+        {
+            StartCoroutine(ShowDialogue());
+            
+        }
+        else
+        {
+            dialoguePanel.SetActive(false);
+            didDialogueStart = false;
+            Time.timeScale = 1f;
+        }
+    }
+
+    private IEnumerator ShowDialogue()
+    {
+        dialogueText.text = string.Empty;
+
+        foreach (char letter in dialogueLines[lineIndex])
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+        }
+    }
+    
+}

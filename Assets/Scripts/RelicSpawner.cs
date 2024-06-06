@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RelicSpawner : MonoBehaviour
@@ -7,6 +5,7 @@ public class RelicSpawner : MonoBehaviour
     public GameObject relic;
     private float xOffset = 1.2f;
     private float yOffset = -1.2f;
+
     public void SpawnRelic()
     {
         float xValue = transform.position.x + xOffset;
