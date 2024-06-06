@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource walkingSound;
     bool stoppedWalkingSound;
     public AudioSource ouchSound;
+    [SerializeField] GameObject[] vidas;
 
     // POWER UPS
     private bool hasSuperSpeed = false;
@@ -157,6 +158,9 @@ public class PlayerController : MonoBehaviour
                 isInvulnerable = false;
             }
         }
+
+        //actualizar vidas
+        UpdateHealthUI();
     }
     private void FixedUpdate() {
         
@@ -252,5 +256,13 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player died");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void UpdateHealthUI()
+    {
+        for (int i = 0; i < vidas.Length; i++)
+        {
+            vidas[i].SetActive(i < currentHealth);
+        }
     }
 }
