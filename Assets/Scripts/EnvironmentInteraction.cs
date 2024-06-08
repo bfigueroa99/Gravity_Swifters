@@ -6,9 +6,12 @@ public class EnvironmentInteraction : MonoBehaviour
 {
     private bool interactionAllowed;
     private bool alreadyInteracted;
+    public static bool interactedWithTree;
 
     void Update()
     {
+        interactedWithTree = false;
+
         if (interactionAllowed && Input.GetKeyDown(KeyCode.E))
         {
             Interact();
@@ -34,6 +37,7 @@ public class EnvironmentInteraction : MonoBehaviour
         if(gameObject.name.Equals("Tree1") && !alreadyInteracted){
             GetComponent<RelicSpawner>().SpawnRelic();
             alreadyInteracted = true;
+            interactedWithTree = true;
         }
     }
 }

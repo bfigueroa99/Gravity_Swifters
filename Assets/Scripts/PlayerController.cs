@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -17,16 +18,18 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 16f;
     public float doubleJumpForce = 12f;
     public float gravitySense = 1f;
-    public bool isGrounded = false; 
-    public bool isTopGrounded = false;
-    private bool isInverted= false;
+    public static bool isGrounded = false; 
+    public static bool isTopGrounded = false;
+    public static bool isPlayerMoving;
+    public static bool playerJumped;
+    public static bool isInverted = false;
+    public static bool changedGravity;
+    public static bool playerHealed;
+    public static bool tookDamage;
+    public static bool touchedSpike;
     bool isDoubleTap = false;
     private float lastTapTime = 0f;
     public float doubleTapTimeThreshold = 0.5f;
-    public AudioSource gravitySwiftSound;
-    public AudioSource walkingSound;
-    bool stoppedWalkingSound;
-    public AudioSource ouchSound;
     [SerializeField] GameObject[] vidas;
 
     // POWER UPS
@@ -58,6 +61,15 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
 
+        if (rb.velocity.magnitude > 0)
+        {
+            isPlayerMoving = true;
+        }
+        else
+        {
+            isPlayerMoving = false;
+        }
+
         if (horizontalMovement < 0)
         {
             transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z); // Hacia la izquierda
@@ -67,34 +79,18 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z); // Hacia la derecha
         }
 
-
-        // Sonido de caminar
-        if (rb.velocity.magnitude == 0)
-        {   
-            walkingSound.Play();
-            stoppedWalkingSound = false;
-        }
-
-        if ((isGrounded || isTopGrounded) && stoppedWalkingSound)
-        {
-            walkingSound.Play();
-            stoppedWalkingSound = false;
-        }
-
-        if ((isGrounded || isTopGrounded) == false)
-        {
-            walkingSound.Stop();
-            stoppedWalkingSound = true;
-        }
-
         // Salto
         if ((isGrounded || isTopGrounded) && !Input.GetButton("Jump"))
         {
             doubleJumpWindow = false;
         }
 
+        playerJumped = false;
+
         if (Input.GetButtonDown("Jump"))
         {
+            playerJumped = true;
+
             if (isGrounded || isTopGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -115,14 +111,16 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
+        changedGravity = false;
+
         // Cambio de gravedad
         if (Input.GetKeyDown(KeyCode.LeftShift) && (isGrounded || isTopGrounded))
         {
             Debug.Log("Cambio de gravedad");
             isInverted= !isInverted;
+            changedGravity = true;
             gravitySense *= -1;
             rb.gravityScale *= -1;
-            gravitySwiftSound.Play();
             isGrounded = false;
             isTopGrounded = false;
             CharacterRotation();
@@ -162,6 +160,7 @@ public class PlayerController : MonoBehaviour
         //actualizar vidas
         UpdateHealthUI();
     }
+
     private void FixedUpdate() {
         
         animator.SetBool("onFloor",isGrounded);
@@ -194,10 +193,23 @@ public class PlayerController : MonoBehaviour
         {   
             isGrounded= true;
         }
+
         if (collision.gameObject.tag == "TopGround")
         {
             isTopGrounded= true;
         }
+
+        if (collision.gameObject.tag == "Spike")
+        {
+            touchedSpike = true;
+            StartCoroutine(ResetTouchedSpike());
+        }
+    }
+
+    IEnumerator ResetTouchedSpike()
+    {
+        yield return new WaitForSeconds(1f); 
+        touchedSpike = false;
     }
 
     // POWER UPS
@@ -233,7 +245,15 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        playerHealed = true;
+        StartCoroutine(ResetPlayerHealed());
         Debug.Log("Player healed. Current health: " + currentHealth);
+    }
+
+    IEnumerator ResetPlayerHealed()
+    {
+        yield return new WaitForSeconds(1f); 
+        playerHealed = false;
     }
 
 
@@ -244,7 +264,8 @@ public class PlayerController : MonoBehaviour
             currentHealth -= damage;
             isInvulnerable = true;
             invulnerabilityTimer = invulnerabilityDuration;
-            ouchSound.Play();
+            tookDamage = true;
+            StartCoroutine(ResetTookDamage());
 
             if (currentHealth <= 0)
             {
@@ -252,6 +273,13 @@ public class PlayerController : MonoBehaviour
             }     
         }
     }
+
+    IEnumerator ResetTookDamage()
+    {
+        yield return new WaitForSeconds(0.1f); 
+        tookDamage = false;
+    }
+
     public void Die()
     {
         Debug.Log("Player died");

@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Health
   - Hazards
+  - Spike
   layers:
   - Default
   - TransparentFX

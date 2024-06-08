@@ -7,6 +7,7 @@ public class dialogue : MonoBehaviour
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
+    public static bool pressedDialogue;
 
     [SerializeField, TextArea(4,6)] private string[] dialogueLines;
     [SerializeField] private GameObject dialoguePanel;
@@ -16,6 +17,9 @@ public class dialogue : MonoBehaviour
     {
         if(isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            pressedDialogue = true;
+            StartCoroutine(ResetPressedDialogue());
+
             if (!didDialogueStart){
 
                 StartDialogue();           
@@ -66,6 +70,12 @@ public class dialogue : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
+    }
+
+    private IEnumerator ResetPressedDialogue()
+    {
+        yield return new WaitForSeconds(0.05f); 
+        pressedDialogue = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
