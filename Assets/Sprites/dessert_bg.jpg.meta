@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dessert_bg_0: -3407397065246825453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

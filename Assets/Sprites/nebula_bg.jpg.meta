@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nebula_bg_0: 5226193623687002809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
