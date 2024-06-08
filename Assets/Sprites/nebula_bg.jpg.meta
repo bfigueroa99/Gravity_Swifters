@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3666b8105d80d4bfaa42ac0ea235ef4d
+guid: 4ac5ce1e001b93b4caf414af15fb496d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1785150885645891503
-    second: Add a subheading 1_0
+      213: 5226193623687002809
+    second: nebula_bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Add a subheading 1_0
+      name: nebula_bg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 1280
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa7b569b54126c810800000000000000
-      internalID: 1785150885645891503
+      spriteID: 9ba7643496b278840800000000000000
+      internalID: 5226193623687002809
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Add a subheading 1_0: 1785150885645891503
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
