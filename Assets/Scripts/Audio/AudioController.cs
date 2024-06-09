@@ -6,15 +6,16 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioSource walkingSound, jumpingSound, invertedGravitySound, treeSound, healSound, UISound, 
+    public AudioSource grassWalkingSound, dirtWalkingSound, jumpingSound, invertedGravitySound, treeSound, healSound, UISound, 
     damageSound, spikeSound, relicOpenSound, relicCloseSound;
 
     public AudioClip[] walkingSounds; 
 
     private int currentWalkingSoundIndex = 0; 
+    private bool walkingOnDirt = false;
 
     void Start() {
-        walkingSound.clip = walkingSounds[currentWalkingSoundIndex];
+        grassWalkingSound.clip = walkingSounds[currentWalkingSoundIndex];
     }
 
     void Update()
@@ -24,7 +25,7 @@ public class AudioController : MonoBehaviour
 
         bool isGrounded = PlayerController.isGrounded;
         bool isTopGrounded = PlayerController.isTopGrounded;  
-        bool changedGravity = PlayerController.changedGravity;  
+        bool changedGravity = PlayerController.changedGravity; 
 
         bool interactedWithTree = EnvironmentInteraction.interactedWithTree;    
         bool playerHealed = PlayerController.playerHealed;
@@ -33,17 +34,35 @@ public class AudioController : MonoBehaviour
         bool touchedSpike = PlayerController.touchedSpike;
         bool pickedUpRelic = UIController.pickedUpRelic;
         bool closedRelicText = UIController.closedRelicText;
-        Debug.Log(pickedUpRelic);
+
+        // Audio for inverted gravity
+        if (changedGravity)
+        {   
+            grassWalkingSound.Stop();   
+            dirtWalkingSound.Stop();
+            invertedGravitySound.Play();
+            walkingOnDirt = !walkingOnDirt;
+        }
 
         // Audio for walking
         if (isPlayerMoving && (isTopGrounded || isGrounded))
         {
-            if (!walkingSound.isPlaying)
-            {   
-                walkingSound.Play();
+            if (walkingOnDirt)
+            {
+                if (!dirtWalkingSound.isPlaying)
+                {   
+                    dirtWalkingSound.Play();
+                }
+            }
+            else
+            {
+                if (!grassWalkingSound.isPlaying)
+                {   
+                    grassWalkingSound.Play();
 
-                currentWalkingSoundIndex = Random.Range(0, walkingSounds.Length);
-                walkingSound.clip = walkingSounds[currentWalkingSoundIndex];
+                    currentWalkingSoundIndex = Random.Range(0, walkingSounds.Length);
+                    grassWalkingSound.clip = walkingSounds[currentWalkingSoundIndex];
+                }
             }
 
         }
@@ -51,19 +70,12 @@ public class AudioController : MonoBehaviour
         // Audio for jumping
         if (playerJumped)
         {   
-            walkingSound.Stop();
+            grassWalkingSound.Stop();
 
             if (!jumpingSound.isPlaying)
             {   
                 jumpingSound.Play();
             }
-        }
-
-        // Audio for inverted gravity
-        if (changedGravity)
-        {   
-            walkingSound.Stop();   
-            invertedGravitySound.Play();
         }
 
         // Audio for tree interaction
