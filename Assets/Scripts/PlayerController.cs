@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private float speedBoostDuration = 3f;
     private float speedBoostEndTime = 0f;
     public bool hasSuperAttraction = false;
-    private bool isSuperAttractionActive = false;
+    public bool isSuperAttractionActive = false;
     private bool hasDoubleJump = false;
     private bool doubleJumpWindow = false;
 

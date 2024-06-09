@@ -13,9 +13,9 @@ public class PlayerPowers : MonoBehaviour
 
     private void Start()
     {
-        superAttraction.SetActive(false);
-        superSpeed.SetActive(false);
-        doubleJump.SetActive(false);
+        superAttraction.SetActive(true);
+        superSpeed.SetActive(true);
+        doubleJump.SetActive(true);
     }
 
     public void AddItem(GameObject item)
@@ -24,17 +24,17 @@ public class PlayerPowers : MonoBehaviour
         if (item.name == "SuperSpeed")
         {
             player.GetComponent<PlayerController>().ObtainSuperSpeed();
-            superSpeed.SetActive(true);
+            superSpeed.SetActive(false);
         }
         if (item.name == "SuperAttraction")
         {
             player.GetComponent<PlayerController>().ObtainSuperAttraction();
-            superAttraction.SetActive(true);
+            superAttraction.SetActive(false);
         }
         if (item.name == "DoubleJump")
         {
             player.GetComponent<PlayerController>().ObtainDoubleJump();
-            doubleJump.SetActive(true);
+            doubleJump.SetActive(false);
         }
     }
 
