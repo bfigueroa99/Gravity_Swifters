@@ -45,12 +45,15 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     private Animator animator;
     private Vector3 originalScale;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         originalScale = transform.localScale;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     
@@ -266,6 +269,7 @@ public class PlayerController : MonoBehaviour
             invulnerabilityTimer = invulnerabilityDuration;
             tookDamage = true;
             StartCoroutine(ResetTookDamage());
+            StartCoroutine(ChangeColorOnDamage());
 
             if (currentHealth <= 0)
             {
@@ -280,6 +284,15 @@ public class PlayerController : MonoBehaviour
         tookDamage = false;
     }
 
+    private IEnumerator ChangeColorOnDamage()
+    {
+        // Cambia el color a rojo
+        spriteRenderer.color = Color.red;
+        // Espera un corto período de tiempo (0.1 segundos)
+        yield return new WaitForSeconds(0.1f);
+        // Vuelve al color original
+        spriteRenderer.color = Color.white;
+    }
     public void Die()
     {
         Debug.Log("Player died");
