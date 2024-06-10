@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7098960932135554089}
   - component: {fileID: 3441955573930611793}
   - component: {fileID: -6614563077660716626}
+  - component: {fileID: 125717281218025488}
   m_Layer: 0
   m_Name: Relic
   m_TagString: Untagged
@@ -133,3 +134,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &125717281218025488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2275820427087397355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8557baae99b91478383754b8a22cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
