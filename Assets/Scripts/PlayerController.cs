@@ -96,7 +96,12 @@ public class PlayerController : MonoBehaviour
 
             if (isGrounded || isTopGrounded)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                Debug.Log("Salta");
+                if(isInverted){
+                    rb.velocity = new Vector2(rb.velocity.x, -jumpForce);
+                } else {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
                 doubleJumpWindow = !doubleJumpWindow;
                 isGrounded = false;
                 isTopGrounded = false;
@@ -288,7 +293,7 @@ public class PlayerController : MonoBehaviour
     {
         // Cambia el color a rojo
         spriteRenderer.color = Color.red;
-        // Espera un corto período de tiempo (0.1 segundos)
+        // Espera un corto perï¿½odo de tiempo (0.1 segundos)
         yield return new WaitForSeconds(0.1f);
         // Vuelve al color original
         spriteRenderer.color = Color.white;
