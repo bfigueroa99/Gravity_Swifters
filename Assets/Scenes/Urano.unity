@@ -791,6 +791,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate
@@ -2446,6 +2458,18 @@ PrefabInstance:
     - target: {fileID: 2703105778920876328, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5130925
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.35351366
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

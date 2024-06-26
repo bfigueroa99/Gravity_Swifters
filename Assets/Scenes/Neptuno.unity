@@ -683,6 +683,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (1)
@@ -754,6 +766,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (3)
@@ -823,6 +847,18 @@ PrefabInstance:
     - target: {fileID: 3955115890718758893, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
       objectReference: {fileID: 0}
     - target: {fileID: 4681625167528561542, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_LocalScale.x
@@ -1187,6 +1223,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (10)
@@ -2590,6 +2638,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
+      objectReference: {fileID: 0}
     - target: {fileID: 4681625167528561542, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9187288
@@ -2718,6 +2778,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2731,6 +2803,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate
@@ -2878,6 +2962,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (9)
@@ -3172,6 +3268,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3529412
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3385,6 +3493,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (7)
@@ -3795,6 +3915,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (5)
@@ -3861,6 +3993,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (8)
@@ -23054,6 +23198,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (2)
@@ -23323,6 +23479,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (6)
@@ -23454,6 +23622,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6634094
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.82641506
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47245988
+      objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
       value: Gate (4)

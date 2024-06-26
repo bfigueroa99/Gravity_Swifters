@@ -314,6 +314,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8075708
+      objectReference: {fileID: 0}
     - target: {fileID: 4681625167528561542, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.541588
@@ -420,6 +432,14 @@ PrefabInstance:
     - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80784315
       objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
@@ -711,6 +731,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80784315
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -953,6 +981,14 @@ PrefabInstance:
     - target: {fileID: 2703105778920876328, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757736457469949051, guid: 8a9ab9cdbf24e8541945fd6abaa14c39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80784315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1223,6 +1259,14 @@ PrefabInstance:
     - target: {fileID: 3955115890718758893, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997147814312928767, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80784315
       objectReference: {fileID: 0}
     - target: {fileID: 4681625167528561542, guid: 2f1c00c3f712c2041836bc8db0db2529, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18958,6 +19002,14 @@ PrefabInstance:
     - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 769476844059731031, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80784315
       objectReference: {fileID: 0}
     - target: {fileID: 964599560948801991, guid: 98bf28ee262bcd8429150abaa5aad59a, type: 3}
       propertyPath: m_Name
