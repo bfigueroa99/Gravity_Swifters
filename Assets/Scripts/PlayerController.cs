@@ -63,6 +63,14 @@ public class PlayerController : MonoBehaviour
         float horizontalMovement= Input.GetAxis("Horizontal");
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
+        bool pressedDialogue = dialogue.pressedDialogue;
+        Debug.Log(pressedDialogue);
+        Debug.Log("PLAYER");
+
+        if (pressedDialogue)
+        {
+            isPlayerMoving = false;
+        }
 
         if (rb.velocity.magnitude > 0)
         {
@@ -300,6 +308,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
+        tookDamage = false;
         Debug.Log("Player died");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

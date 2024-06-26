@@ -9,13 +9,17 @@ public class AudioController : MonoBehaviour
     public AudioSource grassWalkingSound, dirtWalkingSound, jumpingSound, invertedGravitySound, treeSound, healSound, UISound, 
     damageSound, spikeSound, relicOpenSound, relicCloseSound;
 
+    public PlayerController playerController;
+
     public AudioClip[] walkingSounds; 
 
     private int currentWalkingSoundIndex = 0; 
     private bool walkingOnDirt = false;
 
-    void Start() {
+    void Start() 
+    {
         grassWalkingSound.clip = walkingSounds[currentWalkingSoundIndex];
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     void Update()
@@ -115,10 +119,10 @@ public class AudioController : MonoBehaviour
                 damageSound.Play();
             }
 
-            if (touchedSpike)
+           /* if (touchedSpike)
             {
                 spikeSound.Play();
-            }
+            }*/
         }
 
         if (pickedUpRelic)
