@@ -119,6 +119,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15379949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9146647087270535008, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
+  m_PrefabInstance: {fileID: 553764075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &15379950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15379949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf212249b7e8494419d157c4894c2279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &37275007 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8590792988832474055, guid: 18d2529084488354d8a4bb1a36a2a73c, type: 3}
@@ -817,6 +834,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 563300637062157684, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9157517636092850729, guid: 85d62297f99adfe4989be352d8173f00, type: 3}
     - target: {fileID: 594628171956183638, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.84
@@ -868,7 +889,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9146647087270535008, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 15379950}
   m_SourcePrefab: {fileID: 100100000, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
 --- !u!1001 &574789497
 PrefabInstance:
