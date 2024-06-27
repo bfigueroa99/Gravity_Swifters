@@ -64,6 +64,12 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
         bool pressedDialogue = dialogue.pressedDialogue;
+
+        // Volver a pantalla de inicio
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            
+        }
         
 
         if (pressedDialogue)
