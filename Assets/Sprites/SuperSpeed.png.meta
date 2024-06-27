@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 85d62297f99adfe4989be352d8173f00
+guid: 6ed25e6039e68be46923d93c2484deb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9157517636092850729
-    second: SuperSpeed_0
+      213: 3241429096843703601
+    second: SuperSpeed 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SuperSpeed_0
+      name: SuperSpeed 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92270bb75c9061f70800000000000000
-      internalID: 9157517636092850729
+      spriteID: 135fbf9f69edbfc20800000000000000
+      internalID: 3241429096843703601
       vertices: []
       indices: 
       edges: []
@@ -131,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SuperSpeed_0: 9157517636092850729
+      SuperSpeed 1_0: 3241429096843703601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

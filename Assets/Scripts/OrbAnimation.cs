@@ -26,7 +26,6 @@ public class OrbAnimation : MonoBehaviour
     {   
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y + distance);
         transform.position = currentPosition;
-
     }
 
     IEnumerator ChangeDirection()
