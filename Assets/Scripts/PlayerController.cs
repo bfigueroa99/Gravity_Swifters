@@ -64,8 +64,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", Mathf.Abs(horizontalMovement));
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
         bool pressedDialogue = dialogue.pressedDialogue;
-        Debug.Log(pressedDialogue);
-        Debug.Log("PLAYER");
+        
 
         if (pressedDialogue)
         {

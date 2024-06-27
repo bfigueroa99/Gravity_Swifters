@@ -36,15 +36,15 @@ public class EnemyMovement : MonoBehaviour
 
                 if (Vector2.Distance(transform.position, movementPoints[nextPointIndex].position) < 0.1f)
                 {
-                    // Llegó al punto, cambiar la animación
+                    
                     StartCoroutine(SetAnimationForPoint(nextPointIndex));
 
-                    // Esperar en el punto
+                    
                     isWaiting = true;
                     yield return new WaitForSeconds(delayAtPoint);
                     isWaiting = false;
 
-                    // Decidir el siguiente punto
+                    
                     nextPointIndex = isMovingForward ? nextPointIndex + 1 : nextPointIndex - 1;
                 }
 
