@@ -65,10 +65,13 @@ public class PlayerController : MonoBehaviour
         rb.velocity= new Vector2(horizontalMovement * movementSpeed, rb.velocity.y);
         bool pressedDialogue = dialogue.pressedDialogue;
 
-        // Volver a pantalla de inicio
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        // Cerrar juego
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #endif
+            Application.Quit();
         }
         
 
