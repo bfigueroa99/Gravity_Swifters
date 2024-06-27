@@ -33,13 +33,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject[] vidas;
 
     // POWER UPS
-    private bool hasSuperSpeed = false;
+    public bool hasSuperSpeed = false;
     private bool isSpeedBoosted = false;
     private float speedBoostDuration = 3f;
     private float speedBoostEndTime = 0f;
     public bool hasSuperAttraction = false;
     public bool isSuperAttractionActive = false;
-    private bool hasDoubleJump = false;
+    public bool hasDoubleJump = false;
     private bool doubleJumpWindow = false;
 
     [Header("Animation")]
