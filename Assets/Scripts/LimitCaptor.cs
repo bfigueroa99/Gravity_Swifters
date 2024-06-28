@@ -8,6 +8,7 @@ public class PlatformTrigger : MonoBehaviour
     public BoxCollider2D otherPlatformCollider;
     [SerializeField] private GameObject Boss;
     [SerializeField] private GameObject BarradeVida;
+    public static bool triggeredBossFight = false;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class PlatformTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {  
             Debug.Log("Player touched the platform.");
+            triggeredBossFight = true;
             StartCoroutine(DisableIsTriggerAfterDelay(1f)); 
         }
     }

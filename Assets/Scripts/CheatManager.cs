@@ -74,18 +74,28 @@ public class CheatManager : MonoBehaviour
 
     void OnSuperJumpToggled(bool isOn)
     {
-        player.GetComponent<PlayerController>().hasDoubleJump = isOn;
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0)) // If the scene is not Menu
+        {
+           player.GetComponent<PlayerController>().hasDoubleJump = isOn; 
+        }
     }
 
     void OnSuperSpeedToggled(bool isOn)
     {
-        player.GetComponent<PlayerController>().hasSuperSpeed = isOn;
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0)) // If the scene is not Menu
+        {
+            player.GetComponent<PlayerController>().hasSuperSpeed = isOn;
+        }
     }
 
     void OnSuperAttractionToggled(bool isOn)
     {
-        player.GetComponent<PlayerController>().hasSuperAttraction = isOn;
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0)) // If the scene is not Menu
+        {
+            player.GetComponent<PlayerController>().hasSuperAttraction = isOn;
+        }
     }
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

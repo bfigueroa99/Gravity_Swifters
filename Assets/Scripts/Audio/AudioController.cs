@@ -7,19 +7,17 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     public AudioSource grassWalkingSound, dirtWalkingSound, jumpingSound, invertedGravitySound, treeSound, healSound, UISound, 
-    damageSound, spikeSound, relicOpenSound, relicCloseSound;
-
-    public PlayerController playerController;
+    damageSound, spikeSound, relicOpenSound, relicCloseSound, introBossFight, bossFightLoop;
 
     public AudioClip[] walkingSounds; 
 
     private int currentWalkingSoundIndex = 0; 
     private bool walkingOnDirt = false;
+    private bool introBoss = true;
 
     void Start() 
     {
         grassWalkingSound.clip = walkingSounds[currentWalkingSoundIndex];
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     void Update()
@@ -38,6 +36,7 @@ public class AudioController : MonoBehaviour
         bool touchedSpike = PlayerController.touchedSpike;
         bool pickedUpRelic = UIController.pickedUpRelic;
         bool closedRelicText = UIController.closedRelicText;
+        bool triggeredBossFight = PlatformTrigger.triggeredBossFight;
 
         // Audio for inverted gravity
         if (changedGravity)
@@ -139,6 +138,20 @@ public class AudioController : MonoBehaviour
             if (!relicCloseSound.isPlaying)
             {
                 relicCloseSound.Play();
+            }
+        }
+
+        if (triggeredBossFight)
+        {
+            if (introBoss)
+            {
+                introBossFight.Play();
+                introBoss = false;  
+            }
+
+            if (!bossFightLoop.isPlaying && !introBossFight.isPlaying)
+            {
+                bossFightLoop.Play();
             }
         }
 

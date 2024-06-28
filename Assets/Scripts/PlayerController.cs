@@ -73,7 +73,11 @@ public class PlayerController : MonoBehaviour
             #endif
             Application.Quit();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene(0);
+        }   
 
         if (pressedDialogue)
         {
