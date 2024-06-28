@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour
     public Rigidbody2D rb2D;
     public Transform jugador;
     private bool mirandoDerecha = true;
+    public static bool bossDied = false;
 
     [Header("Vida")]
     [SerializeField] private float vida;
@@ -46,6 +47,7 @@ public class Boss : MonoBehaviour
 
     private void Muerte()
     {
+        bossDied = true;
         Destroy(gameObject);
     }
 

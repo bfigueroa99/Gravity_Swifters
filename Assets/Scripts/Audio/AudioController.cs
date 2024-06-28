@@ -15,6 +15,7 @@ public class AudioController : MonoBehaviour
     private bool walkingOnDirt = false;
     private bool introBoss = true;
 
+
     void Start() 
     {
         grassWalkingSound.clip = walkingSounds[currentWalkingSoundIndex];
@@ -37,6 +38,7 @@ public class AudioController : MonoBehaviour
         bool pickedUpRelic = UIController.pickedUpRelic;
         bool closedRelicText = UIController.closedRelicText;
         bool triggeredBossFight = PlatformTrigger.triggeredBossFight;
+        bool bossDied = Boss.bossDied;
 
         // Audio for inverted gravity
         if (changedGravity)
@@ -143,18 +145,38 @@ public class AudioController : MonoBehaviour
 
         if (triggeredBossFight)
         {
+            if (bossDied)
+            {   
+                IEnumerator fadeOutBossLoop = FadeOut (bossFightLoop, 1f);
+
+                StartCoroutine(fadeOutBossLoop);
+                StopCoroutine(fadeOutBossLoop);
+            }
+
             if (introBoss)
             {
                 introBossFight.Play();
                 introBoss = false;  
             }
 
-            if (!bossFightLoop.isPlaying && !introBossFight.isPlaying)
+            if (!bossFightLoop.isPlaying && !introBossFight.isPlaying && !bossDied)
             {
                 bossFightLoop.Play();
             }
         }
+    }
 
-        
+    public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) 
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0) {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
     }
 }
