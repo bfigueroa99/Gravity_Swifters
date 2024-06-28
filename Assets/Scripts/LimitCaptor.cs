@@ -6,6 +6,8 @@ public class PlatformTrigger : MonoBehaviour
     public ItemSpawner itemSpawner;
     private BoxCollider2D platformCollider;
     public BoxCollider2D otherPlatformCollider;
+    [SerializeField] private GameObject Boss;
+    [SerializeField] private GameObject BarradeVida;
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class PlatformTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         itemSpawner.StartSpawning();
+        Boss.SetActive(true); 
         platformCollider.isTrigger = false;
         otherPlatformCollider.isTrigger = false;
         Debug.Log("Platform trigger option disabled.");
