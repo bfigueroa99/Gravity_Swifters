@@ -4,14 +4,14 @@ public class ItemSpawner : MonoBehaviour
 {
     public GameObject itemPrefab;
     public float spawnInterval = 2f;
-    private Camera mainCamera;
     private bool shouldSpawn = false;
     private GameObject lastSpawnedItem;
 
-    private void Start()
-    {
-        mainCamera = Camera.main;
-    }
+
+    private Vector2 topLeft = new Vector2(143.19f, 51.6f);
+    private Vector2 bottomLeft = new Vector2(143.19f, 17.54f);
+    private Vector2 bottomRight = new Vector2(216.6f, 17.54f);
+    private Vector2 topRight = new Vector2(216.6f, 51.6f);
 
     private void Update()
     {
@@ -19,7 +19,7 @@ public class ItemSpawner : MonoBehaviour
         {
             CancelInvoke("SpawnItem");
             InvokeRepeating("SpawnItem", 0f, spawnInterval);
-            shouldSpawn = false; 
+            shouldSpawn = false;
         }
     }
 
@@ -28,17 +28,14 @@ public class ItemSpawner : MonoBehaviour
         Vector3 spawnPosition;
         bool isValidPosition = false;
 
-        // Buscar una posición válida para spawnear
+
         do
         {
-            Vector3 screenBottomLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
-            Vector3 screenTopRight = mainCamera.ViewportToWorldPoint(new Vector3(1, 1, mainCamera.nearClipPlane));
-
-            float randomX = Random.Range(screenBottomLeft.x, screenTopRight.x);
-            float randomY = Random.Range(screenBottomLeft.y, screenTopRight.y);
+            float randomX = Random.Range(topLeft.x, topRight.x);
+            float randomY = Random.Range(bottomLeft.y, topLeft.y);
             spawnPosition = new Vector2(randomX, randomY);
 
-            // Comprobar si la posición es válida (no colisiona con el tilemap "Ground")
+
             Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, 0.5f);
             isValidPosition = true;
             foreach (Collider2D collider in colliders)
@@ -52,17 +49,17 @@ public class ItemSpawner : MonoBehaviour
 
         } while (!isValidPosition);
 
-        // Destruir el último objeto spawneado
+
         if (lastSpawnedItem != null)
         {
             Destroy(lastSpawnedItem);
         }
 
-        // Instanciar el nuevo prefab y guardar la referencia
+
         lastSpawnedItem = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
     }
 
-    // Método para activar el spawn
+
     public void StartSpawning()
     {
         shouldSpawn = true;

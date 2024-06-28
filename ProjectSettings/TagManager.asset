@@ -15,6 +15,7 @@ TagManager:
   - Hazards
   - Spike
   - Box
+  - Boss
   layers:
   - Default
   - TransparentFX

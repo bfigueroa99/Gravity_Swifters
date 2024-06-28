@@ -231,19 +231,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: distanciaJugador
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: numeroAleatorio
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -447,4 +447,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   habilidad: {fileID: 5992582703678034855, guid: 165cc8cfae8b64919a5e9bb26c5bb447, type: 3}
-  offsetY: 10
+  offsetY: 8.5
