@@ -58,6 +58,10 @@ public class CheatManager : MonoBehaviour
         {
             ToggleCheatPanel();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     void ToggleCheatPanel()
