@@ -16,6 +16,7 @@ TagManager:
   - Spike
   - Box
   - Boss
+  - AttackZone
   layers:
   - Default
   - TransparentFX
