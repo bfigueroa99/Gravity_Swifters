@@ -6,6 +6,7 @@ public class DogController : MonoBehaviour
 {
     
     [SerializeField] public Transform player;
+    public Transform startPosition;
     private Animator animator;
     private SpriteRenderer spriteRenderer;    
     private bool isAttacking = false;
