@@ -34,8 +34,7 @@ public class PlatformTrigger : MonoBehaviour
     private IEnumerator DisableIsTriggerAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        itemSpawner.StartSpawning();
-        Boss.SetActive(true); 
+        itemSpawner.StartSpawning(); 
         platformCollider.isTrigger = false;
         otherPlatformCollider.isTrigger = false;
         Debug.Log("Platform trigger option disabled.");
