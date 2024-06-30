@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public void Jugar(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Tierra_titulo");
     }
 
     public void Exit(){

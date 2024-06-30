@@ -33,7 +33,34 @@ EditorBuildSettings:
     path: Assets/Scenes/Urano.unity
     guid: 3e1c5691b23cfc246a0d78b57253b838
   - enabled: 1
+    path: Assets/Scenes/Jupiter_titulo.unity
+    guid: 66efd6a04bafe477198a00b7a5b24f13
+  - enabled: 1
+    path: Assets/Scenes/Luna_titulo.unity
+    guid: b53a277eef2184eff9900edf05be6f87
+  - enabled: 1
+    path: Assets/Scenes/Urano_titulo.unity
+    guid: db6c4e1103e004abf96a894f3a561003
+  - enabled: 1
+    path: Assets/Scenes/Marte_titulo.unity
+    guid: 547cf1043277841bea28ad2984df8252
+  - enabled: 1
+    path: Assets/Scenes/Mercurio_titulo.unity
+    guid: 250cea1ba35aa43d5a599e25f5ca6daf
+  - enabled: 1
+    path: Assets/Scenes/Venus_titulo.unity
+    guid: c89ad6dcb8d054a5bb269568842ffef6
+  - enabled: 1
+    path: Assets/Scenes/Neptuno_titulo.unity
+    guid: 0af33db65491e44db81981321194e6a8
+  - enabled: 1
     path: Assets/Scenes/Neptuno.unity
     guid: 35fb299172b73cf45835c0651e1b6f8e
+  - enabled: 1
+    path: Assets/Scenes/Tierra_titulo.unity
+    guid: b43b1d2d7c4f1450cb9fe7ec00a46f3c
+  - enabled: 1
+    path: Assets/Scenes/Saturno_titulo.unity
+    guid: f91872cf971b6451983494d78a280c56
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

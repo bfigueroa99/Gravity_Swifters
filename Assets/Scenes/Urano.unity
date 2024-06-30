@@ -1825,6 +1825,83 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 5674238303342654294, guid: 394f1b95e6a925545a4f8213b6425fb8, type: 3}
   m_PrefabInstance: {fileID: 1042252417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &881664731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 125717281218025488, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 554877199}
+    - target: {fileID: 2275820427087397355, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_Name
+      value: Relic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441955573930611793, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3322061551863263784, guid: efac6c54c3ae346d4b4e5edb70f969cd, type: 3}
+    - target: {fileID: 3441955573930611793, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441955573930611793, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441955573930611793, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.041096944
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098960932135554089, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d24c38c0aed3ac448ae12b1552a34dfb, type: 3}
 --- !u!1001 &1002904413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2828,7 +2905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7b2b2dc05c24579b6ba68137d3724c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 0}
+  displayImages: []
 --- !u!4 &1538296983
 Transform:
   m_ObjectHideFlags: 0
@@ -26260,7 +26337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7375465273188015130, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: targetSceneName
-      value: Neptuno
+      value: Neptuno_titulo
       objectReference: {fileID: 0}
     - target: {fileID: 9145556840984176317, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_Name
@@ -26412,3 +26489,4 @@ SceneRoots:
   - {fileID: 1538296983}
   - {fileID: 1241861187}
   - {fileID: 1280842213}
+  - {fileID: 881664731}
