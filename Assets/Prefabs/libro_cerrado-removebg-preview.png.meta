@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      libro_cerrado-removebg-preview_0: -2923072654791568639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

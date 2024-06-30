@@ -1346,23 +1346,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 7919949134923960159, guid: ed682f2f0fc84e24f99e31db57f354b7, type: 3}
   m_PrefabInstance: {fileID: 2018364866}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &588539072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9146647087270535008, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
-  m_PrefabInstance: {fileID: 1591624746}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &588539073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 588539072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf212249b7e8494419d157c4894c2279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &633808954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3326,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7620859170822718901, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7620859170822718901, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 9079832956920503734, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
       propertyPath: player
       value: 
@@ -3354,10 +3345,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9146647087270535008, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 588539073}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d3de097668ec674bb83d664a9a1d4c3, type: 3}
 --- !u!1 &1606843581
 GameObject:
@@ -13885,23 +13873,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.835514, y: 1.185482}
   m_EdgeRadius: 0
---- !u!1 &1785428636 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 194445029568527945, guid: 7740cedd10115ec419523ecac414a587, type: 3}
-  m_PrefabInstance: {fileID: 1789468605}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1785428641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785428636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf212249b7e8494419d157c4894c2279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1789468605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13918,6 +13889,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1445696022}
+    - target: {fileID: 1066949224561558529, guid: 7740cedd10115ec419523ecac414a587, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066949224561558529, guid: 7740cedd10115ec419523ecac414a587, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 4665433688241547920, guid: 7740cedd10115ec419523ecac414a587, type: 3}
       propertyPath: m_Size.x
       value: 0.98
@@ -13977,10 +13956,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 194445029568527945, guid: 7740cedd10115ec419523ecac414a587, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1785428641}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7740cedd10115ec419523ecac414a587, type: 3}
 --- !u!82 &1863839561 stripped
 AudioSource:
