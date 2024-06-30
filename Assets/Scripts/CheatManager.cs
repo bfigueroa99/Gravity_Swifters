@@ -114,8 +114,11 @@ public class CheatManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        OnSuperJumpToggled(superJumpToggle.isOn);
-        OnSuperSpeedToggled(superSpeedToggle.isOn);
-        OnSuperAttractionToggled(superAttractionToggle.isOn);
+        if (player != null)
+        {
+            OnSuperJumpToggled(superJumpToggle.isOn);
+            OnSuperSpeedToggled(superSpeedToggle.isOn);
+            OnSuperAttractionToggled(superAttractionToggle.isOn);
+        }
     }
 }
