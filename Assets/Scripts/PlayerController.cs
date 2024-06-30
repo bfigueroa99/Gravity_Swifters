@@ -235,6 +235,10 @@ public class PlayerController : MonoBehaviour
         {
             isTopGrounded= true;
         }
+        if (collision.gameObject.tag == "Box")
+        {
+            isGrounded = true;
+        }
 
         if (collision.gameObject.tag == "Spike")
         {
