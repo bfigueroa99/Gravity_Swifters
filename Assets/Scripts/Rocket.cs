@@ -52,7 +52,7 @@ public class Rocket : MonoBehaviour
                         {
                             objectToDeactivate.SetActive(false);
                         }
-                        yield break; // Salir de la corrutina
+                        yield break; 
                     }
 
                     movingToPointB = !movingToPointB;
