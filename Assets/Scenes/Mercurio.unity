@@ -889,6 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 248140290}
+  startPosition: {fileID: 0}
 --- !u!95 &555135729
 Animator:
   serializedVersion: 7
@@ -994,7 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7b2b2dc05c24579b6ba68137d3724c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 0}
+  displayImages: []
 --- !u!4 &564904154
 Transform:
   m_ObjectHideFlags: 0
@@ -1713,6 +1714,87 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3531315399830326440, guid: 0f2db91162a2f984193740c5d565e45c, type: 3}
   m_PrefabInstance: {fileID: 255479205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &781422629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1869168103}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1619944119}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'SIGN: SOLAR STORMS ARE APPROACHING'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'ORION: We need to find the clues quickly.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'ORION: We must to get out of this planet.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.398981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.328081
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995005972386203708, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Name
+      value: sign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
 --- !u!1001 &785888007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18718,6 +18800,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1619944119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6986122812408158957, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 730729290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683979728
 GameObject:
   m_ObjectHideFlags: 0
@@ -18903,6 +18990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 248140290}
+  startPosition: {fileID: 0}
 --- !u!95 &1788824762
 Animator:
   serializedVersion: 7
@@ -19110,6 +19198,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18d2529084488354d8a4bb1a36a2a73c, type: 3}
+--- !u!114 &1869168103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2931961113978349919, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 730729290}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1887276787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19457,3 +19556,4 @@ SceneRoots:
   - {fileID: 1315720839}
   - {fileID: 468847003}
   - {fileID: 1972120215}
+  - {fileID: 781422629}

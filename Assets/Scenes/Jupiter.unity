@@ -363,11 +363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6003209283164763829, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.7
+      value: -18.9
       objectReference: {fileID: 0}
     - target: {fileID: 6003209283164763829, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.3
+      value: -9.47
       objectReference: {fileID: 0}
     - target: {fileID: 6003209283164763829, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_LocalPosition.z
@@ -452,6 +452,103 @@ GameObject:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7285845622108046131, guid: 251cb536ff3a30644ad507bf4127f114, type: 3}
   m_PrefabInstance: {fileID: 1392396913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &338688654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 386520311}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 386520312}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'SIGN: MERIDIAN GUILD''S PLANET'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 'ORION: Meridian must have records of recent movements.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: 'ORION: Let''s search their files.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.177814
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.347801
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995005972386203708, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Name
+      value: sign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+--- !u!114 &386520311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2931961113978349919, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 2059881835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &386520312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6986122812408158957, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 2059881835}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &419348519
 GameObject:
@@ -2233,7 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7b2b2dc05c24579b6ba68137d3724c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 0}
+  displayImages: []
 --- !u!4 &1526288590
 Transform:
   m_ObjectHideFlags: 0
@@ -20536,3 +20633,4 @@ SceneRoots:
   - {fileID: 1526288590}
   - {fileID: 837812854}
   - {fileID: 505246345}
+  - {fileID: 338688654}

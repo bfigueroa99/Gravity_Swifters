@@ -1,20 +1,18 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
-public class dialogueMoon : MonoBehaviour
+public class dialogueMars : MonoBehaviour
 {
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
     public static bool pressedDialogue;
-    private Rocket Rocket;
 
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private GameObject Boss;
+    [SerializeField] private Rocket rocket; 
 
     void Update()
     {
@@ -60,14 +58,8 @@ public class dialogueMoon : MonoBehaviour
             dialoguePanel.SetActive(false);
             didDialogueStart = false;
             Time.timeScale = 1f;
-            if (SceneManager.GetActiveScene().name == "Luna")
-            {
-                GetComponent<Animator>().SetTrigger("desaparecer");
-            }
-            else if (SceneManager.GetActiveScene().name == "Marte")
-            {
-                GetComponent<Animator>().SetTrigger("Rotar");
-            }
+            GetComponent<Animator>().SetTrigger("Rotar");
+            ActivarRocket(); // Activar el rocket cuando termine el diálogo
         }
     }
 
@@ -104,15 +96,16 @@ public class dialogueMoon : MonoBehaviour
         }
     }
 
-    private void Desaparecer()
-    {
-        Boss.SetActive(true);
-        gameObject.SetActive(false);
-    }
-
     private void ActivarRocket()
     {
-        gameObject.SetActive(false);
-        Rocket.StartMovingPlatform();
+        if (rocket != null)
+        {
+            gameObject.SetActive(false);
+            rocket.StartMovingPlatform();
+        }
+        else
+        {
+            Debug.LogError("Rocket reference is not assigned in the Inspector.");
+        }
     }
 }

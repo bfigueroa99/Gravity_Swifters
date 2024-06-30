@@ -17,6 +17,7 @@ TagManager:
   - Box
   - Boss
   - AttackZone
+  - Rocket
   layers:
   - Default
   - TransparentFX
