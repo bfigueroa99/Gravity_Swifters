@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     private bool mirandoDerecha = true;
     public static bool bossDied = false;
     public static bool triggeredBossFight = false;
+    public static bool bossReceivedDamage = false;
 
     [Header("Vida")]
     [SerializeField] private float vida;
@@ -39,6 +40,8 @@ public class Boss : MonoBehaviour
     public void RecibirDaño(float daño)
     {
         vida -= daño;
+        bossReceivedDamage = true;
+        StartCoroutine(ResetBossReceivedDamage());
         barraDeVida.CambiarVidaActual(vida);
 
         if (vida <= 0)
@@ -84,6 +87,12 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSeconds(3f); 
         triggeredBossFight = false;
+    }
+
+    IEnumerator ResetBossReceivedDamage()
+    {
+        yield return new WaitForSeconds(0.1f); 
+        bossReceivedDamage = false;
     }
 
 }

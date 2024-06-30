@@ -7,7 +7,7 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     public AudioSource grassWalkingSound, dirtWalkingSound, jumpingSound, invertedGravitySound, treeSound, healSound, UISound, 
-    damageSound, spikeSound, relicOpenSound, relicCloseSound, introBossFight, bossFightLoop;
+    damageSound, spikeSound, relicOpenSound, relicCloseSound, introBossFight, bossFightLoop, bossDamageSound;
 
     public AudioClip[] walkingSounds; 
 
@@ -39,6 +39,7 @@ public class AudioController : MonoBehaviour
         bool closedRelicText = UIController.closedRelicText;
         bool triggeredBossFight = Boss.triggeredBossFight;
         bool bossDied = Boss.bossDied;
+        bool bossReceivedDamage = Boss.bossReceivedDamage;
         
         // Audio for inverted gravity
         if (changedGravity)
@@ -149,6 +150,13 @@ public class AudioController : MonoBehaviour
 
             StartCoroutine(fadeOutBossLoop);
             StopCoroutine(fadeOutBossLoop);
+        }
+        else if (bossReceivedDamage)
+        {
+            if (!bossDamageSound.isPlaying)
+            {
+                bossDamageSound.Play();
+            }
         }
         else if (triggeredBossFight)
         {
