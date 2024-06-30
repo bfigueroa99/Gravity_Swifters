@@ -204,6 +204,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ResetInstanceVariables()
+    {
+        gravitySense = 1;
+        rb.gravityScale = 1;
+        transform.eulerAngles = new Vector3(0, 0, 0);
+        // Añade cualquier otra variable de instancia que necesite ser reseteada
+    }
+
+
     void CharacterRotation(){
         if (gravitySense == -1)
         {
