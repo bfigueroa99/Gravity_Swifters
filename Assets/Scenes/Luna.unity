@@ -1618,6 +1618,194 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5714487680664807864, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
   m_PrefabInstance: {fileID: 248140289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1276949002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1276949004}
+  - component: {fileID: 1276949003}
+  - component: {fileID: 1276949006}
+  - component: {fileID: 1276949005}
+  - component: {fileID: 1276949007}
+  m_Layer: 0
+  m_Name: Malachi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1276949003
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276949002}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1633960591
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7147553b1e72eec449c5ace4f9f4d13a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1276949004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276949002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 171.8246, y: 16.97, z: 0}
+  m_LocalScale: {x: 0.8811, y: 0.7919, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1276949005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276949002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab467b935ce31437d83d005f0cef1f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - 'ORION: Malachi! I found out... You killed my brother!'
+  - 'MALACHI: So, you finally know the truth.'
+  - 'ORION: How could you? He trusted you!'
+  - 'MALACHI: Trust is a fragile thing, Orion. Easily shattered.'
+  - "ORION: You\u2019ll pay for this. You\u2019re coming with me!"
+  - "MALACHI: Oh, I don\u2019t think so."
+  - 'ORION: What are you talking about?'
+  - "MALACHI: I have a plan. One you can\u2019t stop."
+  - 'ORION: What are you doing?'
+  - 'MALACHI: Watch closely, Orion. Witness true power.'
+  - 'ORION: No! What are you becoming?'
+  - 'MALACHI: Something beyond your worst nightmares.'
+  - "ORION: You\u2019re a monster!"
+  - "MALACHI: And now, you\u2019ll join your brother!"
+  - "ORION: I won\u2019t let you get away with this!"
+  dialoguePanel: {fileID: 1707283234}
+  dialogueText: {fileID: 1707283233}
+  Boss: {fileID: 1802532907}
+--- !u!61 &1276949006
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276949002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.212034, y: 2.9619014}
+  m_SpriteTilingProperty:
+    border: {x: 1.1999999, y: 0, z: 1.35, w: 0.14999999}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 4.8, y: 4.8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.224068, y: 5.923803}
+  m_EdgeRadius: 0
+--- !u!95 &1276949007
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276949002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 597f35e5090dc40bf86f0967d1af4352, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1357865464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18580,6 +18768,22 @@ MonoBehaviour:
   otherPlatformCollider: {fileID: 1413129845}
   Boss: {fileID: 1802532907}
   BarradeVida: {fileID: 1505607740}
+--- !u!114 &1707283233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2931961113978349919, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 2035799169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1707283234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6986122812408158957, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 2035799169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724580816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18729,7 +18933,7 @@ Transform:
   m_GameObject: {fileID: 1802532907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 174.216, y: 25.5043, z: 0}
+  m_LocalPosition: {x: 186.48, y: 25.41, z: 0}
   m_LocalScale: {x: 19.543392, y: 18.503979, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19381,3 +19585,4 @@ SceneRoots:
   - {fileID: 103670802}
   - {fileID: 1802532909}
   - {fileID: 70898386}
+  - {fileID: 1276949004}

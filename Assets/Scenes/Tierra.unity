@@ -60380,7 +60380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7b2b2dc05c24579b6ba68137d3724c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 454010574}
+  displayImages:
+  - {fileID: 454010574}
 --- !u!82 &2052536976 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 252641043880225768, guid: 4f3775b7d4a983946b59ca3e0cfe421b, type: 3}
