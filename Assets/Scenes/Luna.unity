@@ -1378,6 +1378,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddea2d33d5545c4781c5471bb533f55, type: 3}
+--- !u!1001 &918304519
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1707283233}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1707283234}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: 'HINT: YOU CAN USE THE SPECIAL GEMS THAT SPAWN RANDOMLY TO TAKE ONE
+        LIFE FROM THE ENEMY'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 151.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995005972386203708, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Name
+      value: sign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
 --- !u!20 &939109366 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6161531540867449537, guid: 5cc211e45b3c4584fb4e527d4bef59df, type: 3}
@@ -19542,3 +19620,4 @@ SceneRoots:
   - {fileID: 1802532909}
   - {fileID: 70898386}
   - {fileID: 3512667598780076772}
+  - {fileID: 918304519}
