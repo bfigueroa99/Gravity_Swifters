@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour
     public Transform jugador;
     private bool mirandoDerecha = true;
     public static bool bossDied = false;
+    public static bool triggeredBossFight = false;
 
     [Header("Vida")]
     [SerializeField] private float vida;
@@ -25,13 +26,14 @@ public class Boss : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         barraDeVida.InicializarBarraDeVida(vida);
         jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
+        triggeredBossFight = true;
     }
 
     private void Update()
     {
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
         animator.SetFloat("distanciaJugador", distanciaJugador);
+        StartCoroutine(ResetTriggeredBossFight());
     }
 
     public void RecibirDaño(float daño)
@@ -76,6 +78,12 @@ public class Boss : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(controladorAtaque.position, radioAtaque);
+    }
+
+    IEnumerator ResetTriggeredBossFight()
+    {
+        yield return new WaitForSeconds(3f); 
+        triggeredBossFight = false;
     }
 
 }

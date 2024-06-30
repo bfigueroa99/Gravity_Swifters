@@ -37,9 +37,9 @@ public class AudioController : MonoBehaviour
         bool touchedSpike = PlayerController.touchedSpike;
         bool pickedUpRelic = UIController.pickedUpRelic;
         bool closedRelicText = UIController.closedRelicText;
-        bool triggeredBossFight = PlatformTrigger.triggeredBossFight;
+        bool triggeredBossFight = Boss.triggeredBossFight;
         bool bossDied = Boss.bossDied;
-
+        
         // Audio for inverted gravity
         if (changedGravity)
         {   
@@ -143,16 +143,15 @@ public class AudioController : MonoBehaviour
             }
         }
 
-        if (triggeredBossFight)
+        if (bossDied)
+        {   
+            IEnumerator fadeOutBossLoop = FadeOut (bossFightLoop, 1f);
+
+            StartCoroutine(fadeOutBossLoop);
+            StopCoroutine(fadeOutBossLoop);
+        }
+        else if (triggeredBossFight)
         {
-            if (bossDied)
-            {   
-                IEnumerator fadeOutBossLoop = FadeOut (bossFightLoop, 1f);
-
-                StartCoroutine(fadeOutBossLoop);
-                StopCoroutine(fadeOutBossLoop);
-            }
-
             if (introBoss)
             {
                 introBossFight.Play();
@@ -164,6 +163,7 @@ public class AudioController : MonoBehaviour
                 bossFightLoop.Play();
             }
         }
+        
     }
 
     public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) 
