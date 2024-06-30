@@ -2093,7 +2093,7 @@ MonoBehaviour:
   dialogueLines:
   - 'ORION: Four guilds passed through here: Solaris, Meridian, Ether, and Glacier. '
   - 'ORION: We need to investigate them.'
-  - 'MALACHI: Let''s start with Solaris on Mars.'
+  - 'MALACHI: Let''s start with Meridan on Jupiter.'
   - 'MALACHI: I will go to invetigate'
   dialoguePanel: {fileID: 1119110591}
   dialogueText: {fileID: 482767822}
