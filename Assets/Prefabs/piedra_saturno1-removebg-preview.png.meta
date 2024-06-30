@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      piedra_saturno1-removebg-preview_0: -3322061551863263784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
