@@ -17,9 +17,16 @@ public class dialogueMoon : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject Boss;
 
+    private bool hasPlayedDialogue; 
+
+    void Start()
+    {
+        hasPlayedDialogue = false; 
+    }
+
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !hasPlayedDialogue)
         {
             pressedDialogue = true;
             StartCoroutine(ResetPressedDialogue());
@@ -69,6 +76,8 @@ public class dialogueMoon : MonoBehaviour
             {
                 GetComponent<Animator>().SetTrigger("Rotar");
             }
+
+            hasPlayedDialogue = true; // Establecer la bandera para que no se reproduzca más de una vez
         }
     }
 
