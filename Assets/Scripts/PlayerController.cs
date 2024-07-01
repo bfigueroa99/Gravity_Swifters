@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = maxHealth;
         originalScale = transform.localScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        isInverted = false;
     }
 
     
