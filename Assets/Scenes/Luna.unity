@@ -2387,7 +2387,7 @@ MonoBehaviour:
   - 'MALACHI: Did you really win?'
   dialoguePanel: {fileID: 1707283234}
   dialogueText: {fileID: 1707283233}
-  nextSceneName: Menu
+  nextSceneName: Creditos
 --- !u!212 &1578244506
 SpriteRenderer:
   m_ObjectHideFlags: 0
