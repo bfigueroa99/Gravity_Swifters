@@ -19196,7 +19196,7 @@ MonoBehaviour:
   cameraScript: {fileID: 939109370}
   itemSpawner: {fileID: 103670801}
   Malachi: {fileID: 1578244503}
-  vida: 1
+  vida: 5
   barraDeVida: {fileID: 1505607742}
   controladorAtaque: {fileID: 637572919}
   radioAtaque: 6
