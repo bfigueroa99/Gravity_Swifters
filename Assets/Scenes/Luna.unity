@@ -478,6 +478,18 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9169811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80946445
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76645774
+      objectReference: {fileID: 0}
     - target: {fileID: 5714487680664807864, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1406,6 +1418,18 @@ PrefabInstance:
     - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240585661571910782, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240585661571910782, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240585661571910782, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18230,7 +18254,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7647059, g: 0.80784315, b: 0.91764706, a: 1}
   m_Origin: {x: -41, y: -58, z: 0}
   m_Size: {x: 267, y: 116, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -18813,7 +18837,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -750047184722822154, guid: 1914d95466e3d4341a618c35a56d5f82, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7647059, g: 0.80784315, b: 0.91764706, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -19377,6 +19401,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7647059
+      objectReference: {fileID: 0}
     - target: {fileID: 4377594944572462954, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 211.5
@@ -19542,6 +19578,18 @@ PrefabInstance:
     - target: {fileID: 2283001707765801046, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80784315
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 7516104101889518210, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
       propertyPath: Boss

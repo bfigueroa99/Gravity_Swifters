@@ -262,7 +262,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0aa6095ddf0316646a1b0d510c7af0f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.99607843, g: 0.8156863, b: 0.7882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -415,6 +415,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.99607843
+      objectReference: {fileID: 0}
     - target: {fileID: 4377594944572462954, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7078073
@@ -1269,6 +1281,18 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.b
+      value: 0.95660377
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.g
+      value: 0.96233535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285924319679548917, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7516104101889518210, guid: ab075f97fdd804e4280311db9a8f43df, type: 3}
       propertyPath: dialogueText
       value: 
@@ -2039,7 +2063,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.99607843, g: 0.8156863, b: 0.7882353, a: 1}
   m_Origin: {x: -514, y: -657, z: 0}
   m_Size: {x: 3064, y: 1636, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -23390,7 +23414,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.99607843, g: 0.8156863, b: 0.7882353, a: 1}
   m_Origin: {x: -28, y: -20, z: 0}
   m_Size: {x: 120, y: 41, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -23958,6 +23982,18 @@ PrefabInstance:
       propertyPath: superAttraction
       value: 
       objectReference: {fileID: 1444868857}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7845995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8136683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9924528
+      objectReference: {fileID: 0}
     - target: {fileID: 5714487680664807864, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_Name
       value: Player

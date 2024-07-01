@@ -380,6 +380,14 @@ PrefabInstance:
       propertyPath: superAttraction
       value: 
       objectReference: {fileID: 1305538713}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9411765
+      objectReference: {fileID: 0}
     - target: {fileID: 5714487680664807864, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_Name
       value: Player
@@ -518,6 +526,14 @@ PrefabInstance:
     - target: {fileID: 1007313892148344664, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
       propertyPath: 'dialogueLines.Array.data[2]'
       value: 'ORION: Let''s search their files.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240585661571910782, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240585661571910782, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 6240539052310247352, guid: 423ddbebf11694fe5a4cfd3c238da6ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1519,7 +1535,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9411765, g: 0.8117647, b: 1, a: 1}
   m_Origin: {x: -1260, y: -3785, z: 0}
   m_Size: {x: 7530, y: 6265, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -19866,7 +19882,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.775465, g: 0.61356354, b: 0.8490566, a: 1}
   m_Origin: {x: -60, y: -44, z: 0}
   m_Size: {x: 211, y: 98, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -20571,6 +20587,14 @@ PrefabInstance:
     - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 4377594944572462954, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_LocalScale.x

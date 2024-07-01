@@ -658,6 +658,18 @@ PrefabInstance:
       propertyPath: superAttraction
       value: 
       objectReference: {fileID: 1739323008}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96981126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.g
+      value: 0.925859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878494929200813677, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8032965
+      objectReference: {fileID: 0}
     - target: {fileID: 5714487680664807864, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2740,7 +2752,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8039216, g: 0.92941177, b: 0.972549, a: 1}
   m_Origin: {x: -514, y: 0, z: 0}
   m_Size: {x: 11175, y: 840, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -22950,7 +22962,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8039216, g: 0.92941177, b: 0.972549, a: 1}
   m_Origin: {x: -41, y: -58, z: 0}
   m_Size: {x: 189, y: 113, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -23380,6 +23392,18 @@ PrefabInstance:
     - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.92941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277108261166578197, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: 4377594944572462954, guid: bffe97f2c5b931e4a99b42d25421d87c, type: 3}
       propertyPath: m_LocalScale.x
