@@ -1533,6 +1533,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5035688863583574495, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
   m_PrefabInstance: {fileID: 574789497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &601058228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 854455449091762951, guid: 7e6f688d49d1f824c8d6594946a98e15, type: 3}
+  m_PrefabInstance: {fileID: 574789497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608940348
 GameObject:
   m_ObjectHideFlags: 0
@@ -24057,7 +24062,7 @@ PrefabInstance:
     - target: {fileID: 1062223169329477561, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: superSpeed
       value: 
-      objectReference: {fileID: 1721485817}
+      objectReference: {fileID: 601058228}
     - target: {fileID: 1062223169329477561, guid: cea858cdb4837e74487cde5ac1d17932, type: 3}
       propertyPath: superAttraction
       value: 
