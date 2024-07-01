@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Mercurio_titulo.unity
     guid: 250cea1ba35aa43d5a599e25f5ca6daf
   - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: fa5c1fa30ab4b4a82b00699b801755a8
+  - enabled: 1
     path: Assets/Scenes/Venus_titulo.unity
     guid: c89ad6dcb8d054a5bb269568842ffef6
   - enabled: 1

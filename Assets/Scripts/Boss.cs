@@ -11,6 +11,9 @@ public class Boss : MonoBehaviour
     public static bool bossDied = false;
     public static bool triggeredBossFight = false;
     public static bool bossReceivedDamage = false;
+    public Camera_moon cameraScript;  
+    public ItemSpawner itemSpawner;
+    [SerializeField] private GameObject Malachi;
 
     [Header("Vida")]
     [SerializeField] private float vida;
@@ -27,6 +30,7 @@ public class Boss : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         barraDeVida.InicializarBarraDeVida(vida);
         jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        cameraScript = Camera.main.GetComponent<Camera_moon>();  
         triggeredBossFight = true;
     }
 
@@ -46,14 +50,26 @@ public class Boss : MonoBehaviour
 
         if (vida <= 0)
         {
-            animator.SetTrigger("Muerte");
+            StartCoroutine(ActivarMuerte());
         }
     }
 
-    private void Muerte()
+    private IEnumerator ActivarMuerte()
     {
+        animator.SetTrigger("Muerte");
+        cameraScript.FocusOnTarget(transform, 5f);  
+        yield return new WaitForSeconds(5f);
+        Muerte();
+    }
+
+    public void Muerte()
+    {
+        itemSpawner.StopSpawning();
+        Malachi.SetActive(true);
         bossDied = true;
         Destroy(gameObject);
+        cameraScript.FocusOnTarget(jugador, 0f);
+
     }
 
     public void MirarJugador()
@@ -94,5 +110,4 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(0.1f); 
         bossReceivedDamage = false;
     }
-
 }

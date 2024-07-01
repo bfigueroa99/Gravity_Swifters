@@ -25,10 +25,10 @@ public class PlatformTrigger : MonoBehaviour
 
     private IEnumerator DisableIsTriggerAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay);
-        itemSpawner.StartSpawning(); 
+        yield return new WaitForSeconds(delay); 
         platformCollider.isTrigger = false;
         otherPlatformCollider.isTrigger = false;
+        BarradeVida.SetActive(true);
         Debug.Log("Platform trigger option disabled.");
     }
 

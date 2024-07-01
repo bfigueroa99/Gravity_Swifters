@@ -1,21 +1,19 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; 
 
-public class dialogueMoon : MonoBehaviour
+public class FinalDialogue : MonoBehaviour
 {
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
     public static bool pressedDialogue;
-    private Rocket Rocket;
-    public ItemSpawner itemSpawner;
 
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField, TextArea(4,6)] private string[] dialogueLines;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-    [SerializeField] private GameObject Boss;
+    [SerializeField] private string nextSceneName;  
 
     void Update()
     {
@@ -26,7 +24,7 @@ public class dialogueMoon : MonoBehaviour
 
             if (!didDialogueStart)
             {
-                StartDialogue();
+                StartDialogue();           
             }
             else if (dialogueText.text == dialogueLines[lineIndex])
             {
@@ -61,14 +59,7 @@ public class dialogueMoon : MonoBehaviour
             dialoguePanel.SetActive(false);
             didDialogueStart = false;
             Time.timeScale = 1f;
-            if (SceneManager.GetActiveScene().name == "Luna")
-            {
-                GetComponent<Animator>().SetTrigger("desaparecer");
-            }
-            else if (SceneManager.GetActiveScene().name == "Marte")
-            {
-                GetComponent<Animator>().SetTrigger("Rotar");
-            }
+            StartCoroutine(WaitAndLoadScene());  
         }
     }
 
@@ -85,8 +76,14 @@ public class dialogueMoon : MonoBehaviour
 
     private IEnumerator ResetPressedDialogue()
     {
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.05f); 
         pressedDialogue = false;
+    }
+
+    private IEnumerator WaitAndLoadScene()  
+    {
+        yield return new WaitForSeconds(3f);  
+        SceneManager.LoadScene(nextSceneName);  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -103,18 +100,5 @@ public class dialogueMoon : MonoBehaviour
         {
             isPlayerInRange = false;
         }
-    }
-
-    private void Desaparecer()
-    {
-        Boss.SetActive(true);
-        itemSpawner.StartSpawning();
-        gameObject.SetActive(false);
-    }
-
-    private void ActivarRocket()
-    {
-        gameObject.SetActive(false);
-        Rocket.StartMovingPlatform();
     }
 }
