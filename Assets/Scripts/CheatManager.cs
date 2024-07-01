@@ -10,6 +10,7 @@ public class CheatManager : MonoBehaviour
     public Toggle superJumpToggle;
     public Toggle superSpeedToggle;
     public Toggle superAttractionToggle;
+    public Toggle invincibleToggle;
     public TMP_Dropdown levelDropdown;
     public GameObject panel;
     private bool isPanelVisible = true;
@@ -46,10 +47,12 @@ public class CheatManager : MonoBehaviour
         superJumpToggle.onValueChanged.AddListener(OnSuperJumpToggled);
         superSpeedToggle.onValueChanged.AddListener(OnSuperSpeedToggled);
         superAttractionToggle.onValueChanged.AddListener(OnSuperAttractionToggled);
+        invincibleToggle.onValueChanged.AddListener(OnInvincibilityToggled);
 
         superJumpToggle.isOn = false;
         superSpeedToggle.isOn = false;
         superAttractionToggle.isOn = false;
+        invincibleToggle.isOn = false;
     }
 
     void Update()
@@ -97,6 +100,13 @@ public class CheatManager : MonoBehaviour
         if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0)) // If the scene is not Menu
         {
             player.GetComponent<PlayerController>().hasSuperAttraction = isOn;
+        }
+    }
+    void OnInvincibilityToggled(bool isOn)
+    {
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0)) // If the scene is not Menu
+        {
+            player.GetComponent<PlayerController>().isInvincible = isOn;
         }
     }
 

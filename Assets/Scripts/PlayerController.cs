@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 1f;
     private bool isInvulnerable = false;
     private float invulnerabilityTimer; 
+    public bool isInvincible = false;
     public float movementSpeed = 8f; 
     public float jumpForce = 16f;
     public float doubleJumpForce = 12f;
@@ -301,19 +302,21 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (!isInvulnerable)
-        {
-            currentHealth -= damage;
-            isInvulnerable = true;
-            invulnerabilityTimer = invulnerabilityDuration;
-            tookDamage = true;
-            StartCoroutine(ResetTookDamage());
-            StartCoroutine(ChangeColorOnDamage());
-
-            if (currentHealth <= 0)
+        if (!isInvincible){
+            if (!isInvulnerable)
             {
-                Die();
-            }     
+                currentHealth -= damage;
+                isInvulnerable = true;
+                invulnerabilityTimer = invulnerabilityDuration;
+                tookDamage = true;
+                StartCoroutine(ResetTookDamage());
+                StartCoroutine(ChangeColorOnDamage());
+
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }     
+            }
         }
     }
 
